@@ -1,5 +1,35 @@
 @charset "UTF-8";
+/*
+  色の設定
+*/
+/* */
+/*
+  フォントファミリー
+*/
+/* */
+/*
+  ブレークポイント
+*/
+/* ブレークポイント（デスクトップ）（単位不要） */
+/* ブレークポイント（タブレット）（単位不要） */
+/* */
+@custom-media --min-lg (min-width: 1024px);
+@custom-media --min-md (min-width: 768px);
 /* Webサイト全体のスタイル設定・初期化 */
+:root {
+  --min-lg: "(min-width: 1024px)";
+  --min-md: "(min-width: 768px)";
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+img {
+  height: auto;
+}
+
 /* init ua styles */
 *,
 *::before,
@@ -386,22 +416,9 @@ body {
   font-feature-settings: "palt" 1;
 }
 
-/*
-  色の設定
-*/
-/* */
-html {
-  font-size: 62.5%;
-  font-family: "Noto Sans JP", sans-serif;
-}
-
-img {
-  height: auto;
-}
-
 .c-mv {
   position: relative;
-  background: #1B9354;
+  background: #1b9354;
   overflow: hidden;
   z-index: 0;
 }
@@ -442,7 +459,7 @@ img {
   font-family: "Crimson Text", serif;
   font-weight: 700;
   text-align: center;
-  color: #FFFAAD;
+  color: #fffaad;
   transform: translate(-50%, -50%);
   z-index: 20;
 }
@@ -716,7 +733,7 @@ img {
   right: 42.6666666667%;
   width: 16vw;
   height: 0.2rem;
-  background: #71AD8D;
+  background: #71ad8d;
   transform: rotate(45deg);
   z-index: -1;
 }
@@ -812,7 +829,7 @@ img {
   left: 50%;
   width: min(34.5rem, 23vw);
   aspect-ratio: 345/565;
-  background: #739C5A;
+  background: #739c5a;
   transform: translate(-50%, -50%) rotate(5deg);
   z-index: -1;
 }
@@ -951,7 +968,7 @@ img {
 }
 
 .c-footer {
-  background: #314E88;
+  background: #314e88;
   position: relative;
   overflow: hidden;
   z-index: 0;
@@ -976,7 +993,7 @@ img {
   font-family: "Crimson Text", serif;
   font-weight: 700;
   text-align: center;
-  color: #FFFAAD;
+  color: #fffaad;
   z-index: 20;
 }
 @media (min-width: 768px) {
@@ -1017,20 +1034,6 @@ img {
   .c-footer__label-jp {
     font-size: 1.6vw;
   }
-}
-.c-footer__label .c-footer-btn {
-  width: 100%;
-}
-.c-footer__label .c-footer-btn .c-btn-border {
-  border: solid 1px #d3d3d3;
-  border-radius: 50px;
-  padding: 3.5rem 120px 2.5rem 120px;
-}
-.c-footer__label .c-footer-btn .c-btn-border .c-btn--btn {
-  margin: 0;
-  color: #fff;
-  font-size: 2rem;
-  font-family: "游ゴシック", serif;
 }
 .c-footer__label .c-footer__sns {
   display: flex;
@@ -1127,4 +1130,20 @@ img {
   font-size: 2rem;
   display: flex;
   justify-content: center;
+}
+
+.c-footer-btn {
+  width: 100%;
+  text-align: center;
+}
+.c-footer-btn--border {
+  border: solid 1px #d3d3d3;
+  border-radius: 50px;
+  padding: 3.5rem 120px 2.5rem 120px;
+}
+.c-footer-btn--border .c-btn--btn {
+  margin: 0;
+  color: #fff;
+  font-size: 2rem;
+  font-family: "游ゴシック", serif;
 }

@@ -1,28 +1,28 @@
 /*
   色の設定
 */
-$color-theme: #1B9354;
-$color-theme-accent: #FFFAAD;
+$color-theme: #1b9354;
+$color-theme-accent: #fffaad;
 $color-gray-0: #fff;
-$color-brown: #D4C4A3;
-$color-green-739C5A: #739C5A;
-$color-green-71AD8D: #71AD8D;
-$color-blue:#314E88;
-$font-family-title-01: "Crimson Text", serif;
-$font-family-title-02: "Noto Sans JP", sans-serif;
+$color-brown: #d4c4a3;
+$color-green-739C5A: #739c5a;
+$color-green-71AD8D: #71ad8d;
+$color-blue: #314e88;
 /* */
 
+/*
+  フォントファミリー
+*/
+$font-family-title-01: 'Crimson Text', serif;
+$font-family-title-02: 'Noto Sans JP', sans-serif;
+/* */
 
-// :root{
-//   --min-lg: '(min-width: #{$lg}px)';
-//   --min-md: '(min-width: #{$md}px)';
-// }
+/*
+  ブレークポイント
+*/
+$lg: 1024; /* ブレークポイント（デスクトップ）（単位不要） */
+$md: 768; /* ブレークポイント（タブレット）（単位不要） */
+/* */
 
-html{
-  font-size: 62.5%;
-  font-family: "Noto Sans JP", sans-serif;
-}
-
-img{
-  height: auto;
-}
+@custom-media --min-lg (min-width: #{$lg}px);
+@custom-media --min-md (min-width: #{$md}px);

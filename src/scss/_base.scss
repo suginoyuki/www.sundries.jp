@@ -1,4 +1,19 @@
+@use '../scss/variable' as *;
+
 /* Webサイト全体のスタイル設定・初期化 */
+:root {
+  --min-lg: '(min-width: #{$lg}px)';
+  --min-md: '(min-width: #{$md}px)';
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+img {
+  height: auto;
+}
 
 /* init ua styles */
 *,
@@ -374,14 +389,13 @@ iframe {
   display: block;
 }
 
-
 /* init base styles */
 
 body {
   min-height: 100vh;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  font-family: "Noto Sans JP";
+  font-family: 'Noto Sans JP';
   font-size: 16px;
   line-height: 1.75;
   letter-spacing: normal;
