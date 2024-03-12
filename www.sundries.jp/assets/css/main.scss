@@ -1,0 +1,13 @@
+@charset 'UTF-8';
+
+// リセットCSS
+@use '../../src/scss/base' as *;
+
+// 基本設定＆色の設定
+@use '../../src/scss/variable' as *;
+
+// Component
+@use '../../src/scss/Component/c-mv' as *;
+@use '../../src/scss/Component/c-about' as *;
+@use '../../src/scss/Component/c-scroll-down' as *;
+@use '../../src/scss/Component/c-footer' as *;
