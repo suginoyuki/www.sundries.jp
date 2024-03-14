@@ -6,9 +6,12 @@
 // 基本設定＆色の設定
 @use '../../src/scss/variable' as *;
 
-// Component
+// sectionごとのcss
 @use '../../src/scss/Component/c-mv' as *;
 @use '../../src/scss/Component/c-about' as *;
-@use '../../src/scss/Component/c-scroll-down' as *;
 @use '../../src/scss/Component/c-footer' as *;
+
+// Component
 @use '../../src/scss/Component/c-btn' as *;
+@use '../../src/scss/Component/c-text' as *;
+@use '../../src/scss/Component/c-scroll-down' as *;
