@@ -1,20 +1,36 @@
 /*
   色の設定
 */
-$color-theme: #1b9354;
+$color-theme: #22af6a;
 $color-theme-accent: #fffaad;
 $color-gray-0: #fff;
+
+// brown
 $color-brown: #d4c4a3;
+
+// green
 $color-green-739C5A: #739c5a;
 $color-green-71AD8D: #71ad8d;
+
+// blue
 $color-blue: #314e88;
+$color-blue-3C87C8: #3c87c8;
+
+// yellow
+$color-yellow-FAF164: #faf164;
+
+// orange
+$color-orange: #ec643e;
+
 /* */
 
 /*
   フォントファミリー
 */
-$font-family-title-01: 'Crimson Text', serif;
-$font-family-title-02: 'Noto Sans JP', sans-serif;
+$font-heading: 'Crimson Text', serif;
+$font-serif: 'Noto Serif JP', serif;
+$font-body: 'Noto Sans JP', sans-serif;
+
 /* */
 
 /*

@@ -1,0 +1,13 @@
+@use '../../scss/variable' as *;
+
+.c-heading-primary {
+  font-size: 4rem;
+  color: $color-gray-0;
+  font-family: $font-serif;
+  font-weight: 400;
+  text-align: center;
+
+  @media (min-width: 1024px) {
+    font-size: 8rem;
+  }
+}

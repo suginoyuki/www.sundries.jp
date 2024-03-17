@@ -15,3 +15,8 @@
 @use '../../src/scss/Component/c-btn' as *;
 @use '../../src/scss/Component/c-text' as *;
 @use '../../src/scss/Component/c-scroll-down' as *;
+@use '../../src/scss/Component/c-list' as *;
+@use '../../src/scss/Component/c-heading' as *;
+
+// utility
+@use '../../src/scss/utility/u-text' as *;
