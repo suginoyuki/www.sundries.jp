@@ -11,11 +11,12 @@
     position: relative;
     max-width: 100%;
     margin: 0 auto;
-    height: 100vh;
+    height: 80vh;
     z-index: 0;
 
     @media (min-width: 768px) {
       width: calc(1400 / 1500 * 100vw);
+      height: auto;
       max-width: calc(100% - 40px);
     }
 
@@ -107,7 +108,7 @@
       }
 
       img {
-        width: calc(100 / 375 * 100vw);
+        width: calc(120 / 375 * 100vw);
 
         @media (min-width: 768px) {
           width: calc(300 / 1500 * 100vw);
@@ -126,7 +127,7 @@
       }
 
       img {
-        width: calc(100 / 375 * 100vw);
+        width: calc(120 / 375 * 100vw);
 
         @media (min-width: 768px) {
           width: calc(300 / 1500 * 100vw);
@@ -221,7 +222,7 @@
       }
 
       img {
-        width: calc(70 / 375 * 100vw);
+        width: calc(90 / 375 * 100vw);
 
         @media (min-width: 768px) {
           width: calc(157 / 1500 * 100vw);
@@ -232,7 +233,7 @@
     // .c-mv__deco--08
     &--08 {
       bottom: 18rem;
-      right: calc((20 / 375 * 100) * -1%);
+      right: calc((30 / 375 * 100) * -1%);
       z-index: -1;
 
       @media (min-width: 768px) {
@@ -240,7 +241,7 @@
       }
 
       img {
-        width: calc(80 / 375 * 100vw);
+        width: calc(120 / 375 * 100vw);
 
         @media (min-width: 768px) {
           width: calc(271 / 1500 * 100vw);
@@ -294,8 +295,8 @@
     // .c-mv__deco--11
     &--11 {
       top: 60%;
-      left: calc((30 / 375 * 100) * -1%);
-      width: calc(90 / 375 * 100vw);
+      left: calc((40 / 375 * 100) * -1%);
+      width: calc(120 / 375 * 100vw);
       aspect-ratio: 1/1;
       background: rgba(199, 199, 199, 0.5);
       border-radius: 50%;

@@ -9,9 +9,11 @@
 // sectionごとのcss
 @use '../../src/scss/Component/c-mv' as *;
 @use '../../src/scss/Component/c-about' as *;
+@use '../../src/scss/Component/c-scene' as *;
 @use '../../src/scss/Component/c-footer' as *;
 
 // Component
+@use '../../src/scss/Component/c-container' as *;
 @use '../../src/scss/Component/c-btn' as *;
 @use '../../src/scss/Component/c-text' as *;
 @use '../../src/scss/Component/c-scroll-down' as *;
@@ -20,3 +22,4 @@
 
 // utility
 @use '../../src/scss/utility/u-text' as *;
+@use '../../src/scss/utility/u-flex' as *;

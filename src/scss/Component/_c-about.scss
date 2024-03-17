@@ -41,6 +41,7 @@
     &-item {
       position: relative;
       display: flex;
+      flex: 0 0 auto;
       justify-content: center;
       width: 100%;
       z-index: 0;
@@ -89,11 +90,22 @@
     // .c-about__content-deco
     &-deco {
       position: absolute;
-      bottom: calc((200 / 1500 * 100) * -1%);
-      left: 0;
+      top: calc((120 / 375 * 100) * -1%);
+      right: calc((60 / 375 * 100) * -1%);
+
+      @media (min-width: 768px) {
+        top: auto;
+        right: auto;
+        bottom: calc((200 / 1500 * 100) * -1%);
+        left: 0;
+      }
 
       img {
-        width: calc(381 / 1500 * 100vw);
+        width: calc(200 / 375 * 100vw);
+
+        @media (min-width: 768px) {
+          width: calc(381 / 1500 * 100vw);
+        }
       }
     }
   }
@@ -126,18 +138,31 @@
     // .c-about__deco--03
     &--03 {
       bottom: 15rem;
-      right: calc(50 / 1500 * 100vw);
+      right: calc((50 / 375 * 100) * -1vw);
+
+      @media (min-width: 768px) {
+        right: calc(50 / 1500 * 100vw);
+      }
 
       img {
-        width: calc(271 / 1500 * 100vw);
+        width: calc(200 / 375 * 100vw);
+
+        @media (min-width: 768px) {
+          width: calc(271 / 1500 * 100vw);
+        }
       }
     }
 
     // .c-about__deco--04
     &--04 {
+      display: none;
       left: calc((20 / 1500 * 100) * -1vw);
       bottom: 3rem;
       z-index: 10;
+
+      @media (min-width: 768px) {
+        display: block;
+      }
 
       img {
         width: calc(302 / 1500 * 100vw);
@@ -146,36 +171,56 @@
 
     // .c-about__deco--05
     &--05 {
-      left: calc((200 / 375 * 100) * -1vw);
-      bottom: 2rem;
-      width: 54rem;
-      aspect-ratio: 538 / 100;
+      left: calc((20 / 375 * 100) * -1vw);
+      bottom: 7rem;
+      width: calc(240 / 375 * 100vw);
+      height: 8rem;
       background: transparent;
       border: 1px solid $color-gray-0;
 
       @media (min-width: 768px) {
+        bottom: 2rem;
+        width: 54rem;
+        height: 10rem;
         left: calc(200 / 1500 * 100vw);
       }
     }
 
     // .c-about__deco--06
     &--06 {
-      right: calc(400 / 1500 * 100vw);
-      bottom: 5rem;
+      right: 1rem;
+      bottom: 3rem;
+
+      @media (min-width: 768px) {
+        right: calc(400 / 1500 * 100vw);
+        bottom: 5rem;
+      }
 
       img {
-        width: calc(151 / 1500 * 100vw);
+        width: calc(80 / 375 * 100vw);
+
+        @media (min-width: 768px) {
+          width: calc(151 / 1500 * 100vw);
+        }
       }
     }
 
     // .c-about__deco--07
     &--07 {
       right: 0;
-      bottom: 0;
+      bottom: 5rem;
       transform: translateY(50%);
 
+      @media (min-width: 768px) {
+        bottom: 0;
+      }
+
       img {
-        width: calc(400 / 1500 * 100vw);
+        width: calc(150 / 375 * 100vw);
+
+        @media (min-width: 768px) {
+          width: calc(400 / 1500 * 100vw);
+        }
       }
     }
   }
@@ -183,8 +228,6 @@
 .c-about-list {
   position: relative;
   width: 100%;
-  max-width: calc(100% - 40px);
-  margin: 0 auto;
   padding-bottom: 5rem;
   z-index: 0;
 
@@ -193,9 +236,9 @@
     margin-top: 1rem;
     line-height: 2;
     color: $color-gray-0;
+    text-align: center;
 
     @media (min-width: 768px) {
-      text-align: center;
     }
   }
 
@@ -251,7 +294,11 @@
     // .c-about-list__deco--01
     &--01 {
       bottom: 10rem;
-      left: calc(30 / 1500 * 100vw);
+      left: calc((60 / 375 * 100) * -1vw);
+
+      @media (min-width: 768px) {
+        left: calc(30 / 1500 * 100vw);
+      }
 
       img {
         width: calc(200 / 375 * 100vw);
@@ -264,8 +311,8 @@
 
     // .c-about-list__deco--02
     &--02 {
-      top: 18rem;
-      left: calc(100 / 1500 * 100vw);
+      top: 4rem;
+      left: calc(10 / 375 * 100vw);
       width: calc(70 / 375 * 100vw);
       aspect-ratio: 1 / 1;
       background: rgba(199, 199, 199, 0.5);
@@ -273,13 +320,14 @@
 
       @media (min-width: 1024px) {
         top: 15rem;
+        left: calc(100 / 1500 * 100vw);
         width: 10rem;
       }
     }
 
     // .c-about-list__deco--03
     &--03 {
-      top: 5rem;
+      top: 15rem;
       right: calc((100 / 375 * 100) * -1vw);
       width: calc(150 / 375 * 100vw);
       aspect-ratio: 1 / 1;
@@ -296,11 +344,15 @@
     // .c-about-list__deco--04
     &--04 {
       top: 70%;
-      right: calc(170 / 1500 * 100vw);
+      right: 0;
       width: 21rem;
       height: 0.1rem;
       background: $color-gray-0;
       transform: translateY(-70%) rotate(20deg);
+
+      @media (min-width: 768px) {
+        right: calc(170 / 1500 * 100vw);
+      }
     }
   }
 }

@@ -10,17 +10,38 @@
 
   @keyframes loop-text {
     0% {
-      transform: translate(0);
+      transform: translateX(0);
     }
 
     100% {
-      transform: translate(-100%);
+      transform: translateX(-100%);
     }
   }
 
   // .c-text-loop--yellow
   &--yellow {
     color: $color-yellow-FAF164;
+  }
+
+  // .c-text-loop--brown
+  &--brown {
+    color: $color-brown-D1AB9D;
+  }
+}
+
+.c-text-loop--col {
+  writing-mode: vertical-lr;
+  animation: loop-text-col 70s linear 0s infinite normal forwards;
+  font-family: $font-body;
+
+  @keyframes loop-text-col {
+    0% {
+      transform: translateY(0);
+    }
+
+    100% {
+      transform: translateY(-100%);
+    }
   }
 }
 

@@ -1,0 +1,33 @@
+@use '../variable' as *;
+
+.u-flex {
+  display: flex;
+}
+
+.u-ib {
+  display: inline-block;
+}
+
+.u-b {
+  display: block;
+}
+
+.u-justify-center {
+  justify-content: center;
+}
+
+.u-items-center {
+  align-items: center;
+}
+
+.u-flex-00auto {
+  flex: 0 0 auto;
+}
+
+.u-flex-01auto {
+  flex: 0 1 auto;
+}
+
+.u-flex-11auto {
+  flex: 1 1 auto;
+}

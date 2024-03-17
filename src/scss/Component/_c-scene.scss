@@ -1,0 +1,132 @@
+@use '../../scss/variable' as *;
+
+.c-scene {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  z-index: 0;
+
+  // .c-scene--blue
+  &--blue {
+    background: $color-blue-3C87C8;
+  }
+
+  // .c-scene__loop
+  &__loop {
+    position: absolute;
+    padding: 0.5rem;
+    top: 0;
+
+    @media (min-width: 768px) {
+      padding: 1rem;
+    }
+
+    // .c-scene__loop--left
+    &--left {
+      left: 0;
+      border-right: 2px solid $color-gray-0;
+    }
+
+    // .c-scene__loop--right
+    &--right {
+      right: 0;
+      border-left: 2px solid $color-gray-0;
+    }
+
+    .c-text-loop {
+      font-size: 2rem;
+      color: $color-gray-0;
+      writing-mode: vertical-lr;
+
+      @media (min-width: 1024px) {
+        font-size: 5rem;
+      }
+    }
+  }
+
+  // .c-scene__wrap
+  &__wrap {
+    width: 100%;
+    max-width: calc(100% - 100px);
+    margin: 0 auto;
+    padding: 10rem 0;
+
+    @media (min-width: 1024px) {
+      max-width: calc(100% - 300px);
+    }
+  }
+
+  // .c-scene__heading
+  &__heading {
+    width: max-content;
+    color: $color-gray-0;
+
+    .c-heading-en {
+      margin: 2rem 0;
+
+      @media (min-width: 1024px) {
+        margin: 4rem 0 2rem;
+      }
+    }
+
+    // .c-scene__heading-label
+    &-label {
+      display: flex;
+      justify-content: flex-end;
+      font-size: 1.6rem;
+    }
+  }
+
+  // .c-scene__content
+  &__content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15rem;
+    gap: 3rem;
+    z-index: 0;
+
+    // .c-scene__content-deco
+    &-deco {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(-40%, -80%);
+
+      img {
+        width: calc(200 / 375 * 100vw);
+
+        @media (min-width: 768px) {
+          width: calc(454 / 1500 * 100vw);
+        }
+      }
+    }
+
+    // .c-scene__content-img
+    &-img {
+      display: flex;
+      flex: 0 0 auto;
+      max-width: 100%;
+    }
+
+    // .c-scene__content-textarea
+    &-textarea {
+      color: $color-gray-0;
+      font-family: $font-serif;
+
+      // .c-scene__content-textarea-img
+      &-img {
+        margin-bottom: 4rem;
+      }
+    }
+
+    // .c-scene__content-label
+    &-label {
+      line-height: 2;
+
+      @media (min-width: 768px) {
+        line-height: 2.5;
+      }
+    }
+  }
+}

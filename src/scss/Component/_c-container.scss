@@ -1,0 +1,7 @@
+@use '../../scss/variable' as *;
+
+.c-container {
+  width: 100%;
+  max-width: calc(100% - 40px);
+  margin: 0 auto;
+}
