@@ -16,7 +16,7 @@
     margin: 0 auto;
     gap: 3rem;
 
-    @media (min-width: 1024px) {
+    @include over(min-lg) {
       flex-wrap: nowrap;
       width: 117rem;
       max-width: 100%;
@@ -33,7 +33,7 @@
     justify-content: center;
     width: 100%;
 
-    @media (min-width: 1024px) {
+    @include over(min-lg) {
       width: 34.6rem;
     }
 
@@ -78,11 +78,11 @@
       font-size: 1.6rem;
       line-height: 2;
 
-      @media (min-width: 1024px) {
+      @include over(min-lg) {
         font-size: 1.8rem;
       }
 
-      @media (min-width: 1024px) {
+      @include over(min-lg) {
         line-height: 2.3;
       }
     }
@@ -93,7 +93,7 @@
       top: calc((120 / 375 * 100) * -1%);
       right: calc((60 / 375 * 100) * -1%);
 
-      @media (min-width: 768px) {
+      @include over(min-md) {
         top: auto;
         right: auto;
         bottom: calc((200 / 1500 * 100) * -1%);
@@ -103,7 +103,7 @@
       img {
         width: calc(200 / 375 * 100vw);
 
-        @media (min-width: 768px) {
+        @include over(min-md) {
           width: calc(381 / 1500 * 100vw);
         }
       }
@@ -140,14 +140,14 @@
       bottom: 15rem;
       right: calc((50 / 375 * 100) * -1vw);
 
-      @media (min-width: 768px) {
+      @include over(min-md) {
         right: calc(50 / 1500 * 100vw);
       }
 
       img {
         width: calc(200 / 375 * 100vw);
 
-        @media (min-width: 768px) {
+        @include over(min-md) {
           width: calc(271 / 1500 * 100vw);
         }
       }
@@ -160,7 +160,7 @@
       bottom: 3rem;
       z-index: 10;
 
-      @media (min-width: 768px) {
+      @include over(min-md) {
         display: block;
       }
 
@@ -178,7 +178,7 @@
       background: transparent;
       border: 1px solid $color-gray-0;
 
-      @media (min-width: 768px) {
+      @include over(min-md) {
         bottom: 2rem;
         width: 54rem;
         height: 10rem;
@@ -191,7 +191,7 @@
       right: 1rem;
       bottom: 3rem;
 
-      @media (min-width: 768px) {
+      @include over(min-md) {
         right: calc(400 / 1500 * 100vw);
         bottom: 5rem;
       }
@@ -199,7 +199,7 @@
       img {
         width: calc(80 / 375 * 100vw);
 
-        @media (min-width: 768px) {
+        @include over(min-md) {
           width: calc(151 / 1500 * 100vw);
         }
       }
@@ -211,14 +211,14 @@
       bottom: 5rem;
       transform: translateY(50%);
 
-      @media (min-width: 768px) {
+      @include over(min-md) {
         bottom: 0;
       }
 
       img {
         width: calc(150 / 375 * 100vw);
 
-        @media (min-width: 768px) {
+        @include over(min-md) {
           width: calc(400 / 1500 * 100vw);
         }
       }
@@ -237,9 +237,6 @@
     line-height: 2;
     color: $color-gray-0;
     text-align: center;
-
-    @media (min-width: 768px) {
-    }
   }
 
   // .c-about-list__caption
@@ -296,14 +293,14 @@
       bottom: 10rem;
       left: calc((60 / 375 * 100) * -1vw);
 
-      @media (min-width: 768px) {
+      @include over(min-md) {
         left: calc(30 / 1500 * 100vw);
       }
 
       img {
         width: calc(200 / 375 * 100vw);
 
-        @media (min-width: 768px) {
+        @include over(min-md) {
           width: calc(271 / 1500 * 100vw);
         }
       }
@@ -318,7 +315,7 @@
       background: rgba(199, 199, 199, 0.5);
       transform: rotate(30deg);
 
-      @media (min-width: 1024px) {
+      @include over(min-lg) {
         top: 15rem;
         left: calc(100 / 1500 * 100vw);
         width: 10rem;
@@ -334,7 +331,7 @@
       background: rgba(199, 199, 199, 0.5);
       border-radius: 50%;
 
-      @media (min-width: 1024px) {
+      @include over(min-lg) {
         top: 10rem;
         right: calc((100 / 1500 * 100) * -1vw);
         width: calc(250 / 1500 * 100vw);
@@ -350,7 +347,7 @@
       background: $color-gray-0;
       transform: translateY(-70%) rotate(20deg);
 
-      @media (min-width: 768px) {
+      @include over(min-md) {
         right: calc(170 / 1500 * 100vw);
       }
     }

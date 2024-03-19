@@ -7,7 +7,7 @@
   font-weight: 400;
   text-align: center;
 
-  @media (min-width: 1024px) {
+  @include over(min-lg) {
     font-size: 8rem;
   }
 }
@@ -58,20 +58,19 @@
   font-family: $font-serif;
   line-height: 1.2;
 
-  @media (min-width: 1024px) {
+  @include over(min-lg) {
     font-size: 3.6rem;
   }
 
   // .c-heading-en--large
   &--large {
-    // font-size: 5rem;
     font-size: clamp(4rem, calc(50 / 375 * 100vw), 6rem);
 
-    @media (min-width: 768px) {
+    @include over(min-md) {
       font-size: 7rem;
     }
 
-    @media (min-width: 1024px) {
+    @include over(min-lg) {
       font-size: 10.5rem;
     }
   }

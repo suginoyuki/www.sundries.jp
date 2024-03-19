@@ -14,7 +14,7 @@
     height: 80vh;
     z-index: 0;
 
-    @media (min-width: 768px) {
+    @include over(min-md) {
       width: calc(1400 / 1500 * 100vw);
       height: auto;
       max-width: calc(100% - 40px);
@@ -25,11 +25,11 @@
       content: '';
       padding-top: calc(500 / 375 * 100vw);
 
-      @media (min-width: 768px) {
+      @include over(min-md) {
         padding-top: calc(600 / 768 * 100vw);
       }
 
-      @media (min-width: 1024px) {
+      @include over(min-lg) {
         padding-top: calc(1000 / 1500 * 100vw);
       }
     }
@@ -50,7 +50,7 @@
     transform: translate(-50%, -50%);
     z-index: 20;
 
-    @media (min-width: 768px) {
+    @include over(min-md) {
       top: 35%;
       gap: 3rem;
       transform: translate(-50%, -35%);
@@ -61,17 +61,17 @@
       font-size: clamp(3rem, calc(60 / 375 * 100vw), 8rem);
       line-height: 1;
 
-      @media (min-width: 768px) {
+      @include over(min-md) {
         font-size: clamp(7rem, calc(80 / 768 * 100vw), 8rem);
       }
 
-      @media (min-width: 1024px) {
+      @include over(min-lg) {
         font-size: calc(120 / 1500 * 100vw);
       }
 
       br {
         &:nth-child(2) {
-          @media (min-width: 768px) {
+          @include over(min-md) {
             display: none;
           }
         }
@@ -83,11 +83,11 @@
       font-size: clamp(1.8rem, calc(18 / 375 * 100vw), 2rem);
       font-weight: normal;
 
-      @media (min-width: 768px) {
+      @include over(min-md) {
         font-size: clamp(2rem, calc(24 / 768 * 100vw), 2.4rem);
       }
 
-      @media (min-width: 1024px) {
+      @include over(min-lg) {
         font-size: calc(24 / 1500 * 100vw);
       }
     }
@@ -102,7 +102,7 @@
       top: 5rem;
       left: 0;
 
-      @media (min-width: 768px) {
+      @include over(min-md) {
         top: 10rem;
         left: calc(60 / 1500 * 100%);
       }
@@ -110,7 +110,7 @@
       img {
         width: calc(120 / 375 * 100vw);
 
-        @media (min-width: 768px) {
+        @include over(min-md) {
           width: calc(300 / 1500 * 100vw);
         }
       }
@@ -121,7 +121,7 @@
       top: 10rem;
       right: 0;
 
-      @media (min-width: 768px) {
+      @include over(min-md) {
         top: 30rem;
         right: calc(20 / 1500 * 100%);
       }
@@ -129,7 +129,7 @@
       img {
         width: calc(120 / 375 * 100vw);
 
-        @media (min-width: 768px) {
+        @include over(min-md) {
           width: calc(300 / 1500 * 100vw);
         }
       }
@@ -140,14 +140,14 @@
       top: 2.5rem;
       right: calc(300 / 1500 * 100%);
 
-      @media (min-width: 768px) {
+      @include over(min-md) {
         top: 5rem;
       }
 
       img {
         width: calc(60 / 375 * 100vw);
 
-        @media (min-width: 768px) {
+        @include over(min-md) {
           width: calc(155 / 1500 * 100vw);
         }
       }
@@ -158,7 +158,7 @@
       bottom: 10rem;
       right: 0;
 
-      @media (min-width: 768px) {
+      @include over(min-md) {
         bottom: 5rem;
         right: calc(200 / 1500 * 100%);
       }
@@ -166,7 +166,7 @@
       img {
         width: calc(150 / 375 * 100vw);
 
-        @media (min-width: 768px) {
+        @include over(min-md) {
           width: calc(413 / 1500 * 100vw);
         }
       }
@@ -177,14 +177,14 @@
       bottom: 10rem;
       left: calc(20 / 1500 * 100%);
 
-      @media (min-width: 768px) {
+      @include over(min-md) {
         bottom: 15rem;
       }
 
       img {
         width: calc(90 / 375 * 100vw);
 
-        @media (min-width: 768px) {
+        @include over(min-md) {
           width: calc(205 / 1500 * 100vw);
         }
       }
@@ -196,7 +196,7 @@
       bottom: auto;
       left: calc(70 / 375 * 100%);
 
-      @media (min-width: 768px) {
+      @include over(min-md) {
         top: auto;
         bottom: 15rem;
         left: calc(500 / 1500 * 100%);
@@ -205,7 +205,7 @@
       img {
         width: calc(70 / 375 * 100vw);
 
-        @media (min-width: 768px) {
+        @include over(min-md) {
           width: calc(120 / 1500 * 100vw);
         }
       }
@@ -216,7 +216,7 @@
       bottom: 3rem;
       right: calc(20 / 325 * 100%);
 
-      @media (min-width: 768px) {
+      @include over(min-md) {
         bottom: 2rem;
         right: calc(10 / 1500 * 100%);
       }
@@ -224,7 +224,7 @@
       img {
         width: calc(90 / 375 * 100vw);
 
-        @media (min-width: 768px) {
+        @include over(min-md) {
           width: calc(157 / 1500 * 100vw);
         }
       }
@@ -236,14 +236,14 @@
       right: calc((30 / 375 * 100) * -1%);
       z-index: -1;
 
-      @media (min-width: 768px) {
+      @include over(min-md) {
         right: calc(150 / 1500 * 100%);
       }
 
       img {
         width: calc(120 / 375 * 100vw);
 
-        @media (min-width: 768px) {
+        @include over(min-md) {
           width: calc(271 / 1500 * 100vw);
         }
       }
@@ -256,20 +256,20 @@
       transform: rotate(-90deg);
       z-index: -1;
 
-      @media (min-width: 768px) {
+      @include over(min-md) {
         top: 2rem;
         left: calc(350 / 1500 * 100%);
         transform: rotate(180deg);
       }
 
-      @media (min-width: 768px) {
+      @include over(min-md) {
         top: -12rem;
       }
 
       img {
         width: calc(80 / 375 * 100vw);
 
-        @media (min-width: 768px) {
+        @include over(min-md) {
           width: calc(271 / 1500 * 100vw);
         }
       }
@@ -282,7 +282,7 @@
       transform: rotate(190deg);
       z-index: -1;
 
-      @media (min-width: 768px) {
+      @include over(min-md) {
         left: calc((140 / 1500 * 100) * -1%);
         bottom: 5rem;
       }
@@ -303,7 +303,7 @@
       transform: translateY(-60%);
       z-index: -1;
 
-      @media (min-width: 768px) {
+      @include over(min-md) {
         top: 50%;
         left: calc(240 / 1500 * 100%);
         width: calc(170 / 1500 * 100vw);
@@ -322,7 +322,7 @@
       transform: translateY(-78%);
       z-index: -1;
 
-      @media (min-width: 768px) {
+      @include over(min-md) {
         top: 60%;
         left: calc(550 / 1500 * 100%);
         right: auto;
@@ -341,7 +341,7 @@
       transform: rotate(45deg);
       z-index: -1;
 
-      @media (min-width: 768px) {
+      @include over(min-md) {
         top: 30rem;
         width: calc(340 / 1500 * 100vw);
         right: calc(250 / 1500 * 100%);
@@ -358,7 +358,7 @@
       transform: rotate(50deg);
       z-index: -1;
 
-      @media (min-width: 768px) {
+      @include over(min-md) {
         top: 14rem;
         right: calc(360 / 1500 * 100%);
         width: calc(120 / 1500 * 100vw);
@@ -377,7 +377,7 @@
       transform: rotate(45deg);
       z-index: -1;
 
-      @media (min-width: 768px) {
+      @include over(min-md) {
         top: 14rem;
         right: calc((150 / 1500 * 100) * -1%);
         width: calc(250 / 1500 * 100vw);

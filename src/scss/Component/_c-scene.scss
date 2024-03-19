@@ -14,57 +14,119 @@
   // .c-scene__loop
   &__loop {
     position: absolute;
+    display: flex;
     padding: 0.5rem;
     top: 0;
 
-    @media (min-width: 768px) {
+    @include over(min-md) {
       padding: 1rem;
+      display: block;
     }
 
     // .c-scene__loop--left
     &--left {
-      left: 0;
-      border-right: 2px solid $color-gray-0;
+      border-right: none;
+      border-bottom: 2px solid $color-gray-0;
+
+      @include over(min-lg) {
+        left: 0;
+        border-right: 2px solid $color-gray-0;
+      }
     }
 
     // .c-scene__loop--right
     &--right {
-      right: 0;
-      border-left: 2px solid $color-gray-0;
+      display: none;
+
+      @include over(min-lg) {
+        display: block;
+        right: 0;
+        border-left: 2px solid $color-gray-0;
+      }
     }
 
     .c-text-loop {
-      font-size: 2rem;
+      font-size: 3rem;
       color: $color-gray-0;
-      writing-mode: vertical-lr;
+      writing-mode: inherit;
+      animation: loop-text 30s linear 0s infinite normal forwards;
 
-      @media (min-width: 1024px) {
+      @include over(min-lg) {
         font-size: 5rem;
+        writing-mode: vertical-lr;
+        animation: loop-text-col 70s linear 0s infinite normal forwards;
       }
     }
   }
 
   // .c-scene__wrap
   &__wrap {
+    position: relative;
     width: 100%;
-    max-width: calc(100% - 100px);
+    max-width: calc(100% - 6rem);
     margin: 0 auto;
-    padding: 10rem 0;
+    padding: 8rem 0;
+    z-index: 0;
 
-    @media (min-width: 1024px) {
+    @include over(min-lg) {
       max-width: calc(100% - 300px);
+      padding: 10rem 0;
+    }
+  }
+
+  // .c-scene__deco
+  &__deco {
+    position: absolute;
+
+    // .c-scene__deco--01
+    &--01 {
+      top: 38rem;
+      right: -2rem;
+      z-index: 1;
+
+      @include over(min-lg) {
+        top: 30rem;
+      }
+
+      img {
+        width: calc(100 / 375 * 100vw);
+
+        @include over(min-lg) {
+          width: 32.1rem;
+        }
+      }
+    }
+
+    // .c-scene__deco--02
+    &--02 {
+      width: 30rem;
+      height: 15rem;
+      top: 42rem;
+      right: -8rem;
+      border: 1px solid $color-gray-0;
+
+      @include over(min-md) {
+        width: 49rem;
+        height: 33rem;
+        top: 50rem;
+        border: 2px solid $color-gray-0;
+      }
     }
   }
 
   // .c-scene__heading
   &__heading {
-    width: max-content;
+    width: 100%;
     color: $color-gray-0;
+
+    @include over(min-md) {
+      width: max-content;
+    }
 
     .c-heading-en {
       margin: 2rem 0;
 
-      @media (min-width: 1024px) {
+      @include over(min-lg) {
         margin: 4rem 0 2rem;
       }
     }
@@ -73,7 +135,13 @@
     &-label {
       display: flex;
       justify-content: flex-end;
-      font-size: 1.6rem;
+      font-size: 1.4rem;
+      padding-right: 4rem;
+
+      @include over(min-md) {
+        font-size: 1.6rem;
+        padding-right: 0;
+      }
     }
   }
 
@@ -82,21 +150,46 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    margin-top: 15rem;
+    flex-wrap: wrap;
+    margin-top: 7rem;
     gap: 3rem;
     z-index: 0;
+
+    @include over(min-lg) {
+      margin-top: 15rem;
+    }
+
+    // .c-scene__content--reverse
+    &--reverse {
+      flex-direction: row-reverse;
+      margin-top: 5rem;
+
+      @include over(min-lg) {
+        margin-top: 10rem;
+      }
+
+      .c-scene__content-img {
+        @include over(min-lg) {
+          margin-top: -20rem;
+        }
+      }
+    }
 
     // .c-scene__content-deco
     &-deco {
       position: absolute;
-      top: 0;
+      top: -5rem;
       left: 0;
       transform: translate(-40%, -80%);
+
+      @include over(min-md) {
+        top: 0;
+      }
 
       img {
         width: calc(200 / 375 * 100vw);
 
-        @media (min-width: 768px) {
+        @include over(min-md) {
           width: calc(454 / 1500 * 100vw);
         }
       }
@@ -107,6 +200,11 @@
       display: flex;
       flex: 0 0 auto;
       max-width: 100%;
+      transform: translateX(-40%);
+
+      @include over(min-lg) {
+        transform: translate(0);
+      }
     }
 
     // .c-scene__content-textarea
@@ -116,7 +214,16 @@
 
       // .c-scene__content-textarea-img
       &-img {
-        margin-bottom: 4rem;
+        position: absolute;
+        top: 12rem;
+        right: -1rem;
+        width: calc(120 / 375 * 100vw);
+
+        @include over(min-lg) {
+          position: inherit;
+          margin-bottom: 4rem;
+          width: 23.4rem;
+        }
       }
     }
 
@@ -124,7 +231,7 @@
     &-label {
       line-height: 2;
 
-      @media (min-width: 768px) {
+      @include over(min-md) {
         line-height: 2.5;
       }
     }

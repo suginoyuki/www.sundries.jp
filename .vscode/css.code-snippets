@@ -32,14 +32,6 @@
     "prefix": "aby",
     "body": ["position: absolute;", "top: 50%;", "left: 0;", "transform: translateY(-50%);"]
   },
-  "background": {
-    "prefix": "bg",
-    "body": ["background: theme('colors.theme.DEFAULT');"]
-  },
-  "color": {
-    "prefix": "color",
-    "body": ["color: theme('colors.theme.DEFAULT');"]
-  },
   "before": {
     "prefix": "bf",
     "body": ["&::before{", "	content: '';", "}"]

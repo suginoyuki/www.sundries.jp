@@ -1,122 +1,122 @@
 @use '../../scss/variable' as *;
 
-.c-product{
-    background: $color-orange;
+.c-product {
+  background: $color-orange;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+
+  &__wrap {
     position: relative;
-    overflow: hidden;
+    width: calc(520 / 768 * 100vw);
+    max-width: 100%;
+    margin: 0 auto;
     z-index: 0;
-    
-    &__wrap{
-        position: relative;
-        width: calc( 520 / 768 * 100vw );
-        max-width: 100%;
-        margin: 0 auto;
-        z-index: 0;
-        padding-top: 20vw;
-    
-        @media (min-width:768px) {
-            width: calc( 1400 / 1500 * 100vw );
-            max-width: calc( 100% - 40px );
-            padding-top: 15vw;
-        }
+    padding-top: 20vw;
+
+    @include over(min-md) {
+      width: calc(1400 / 1500 * 100vw);
+      max-width: calc(100% - 40px);
+      padding-top: 15vw;
+    }
+  }
+
+  &__title {
+    font-family: 'Crimson Text', serif;
+    font-weight: 700;
+    text-align: center;
+    z-index: 20;
+
+    &-jp {
+      text-align: center;
+    }
+  }
+
+  &__border {
+    border-top: solid 4px #fff;
+    border-left: solid 4px #fff;
+  }
+
+  &__block {
+    margin: 0 auto;
+  }
+
+  &__list {
+    display: flex;
+    align-items: normal;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+  }
+
+  &__item {
+    width: calc(100% / 4);
+    list-style: none;
+    border-right: solid 4px #fff;
+    border-bottom: solid 4px #fff;
+
+    @media (min-width: 768px) {
+      padding: 20px 40px 60px;
     }
 
-    &__title{
-        font-family: "Crimson Text", serif;
-        font-weight: 700;
+    &__img {
+      width: fit-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+    }
+
+    &--01 {
+      width: 50%;
+    }
+
+    &--02 {
+      width: 100%;
+    }
+
+    &--05 {
+      width: 70%;
+    }
+
+    &--06 {
+      width: 50%;
+    }
+
+    &--07 {
+      width: 80%;
+    }
+
+    &--08 {
+      width: 70%;
+    }
+
+    .c-product__link {
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      height: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  &__content {
+    padding-top: 2rem;
+    margin: 0 auto;
+
+    .c-product-col {
+      text-align: center;
+
+      &__jp {
         text-align: center;
-        z-index: 20;
-
-        &-jp{
-            text-align: center;
-        }
+      }
     }
 
-    &__border{
-        border-top: solid 4px #fff;
-        border-left: solid 4px #fff;
+    .c-price {
+      text-align: center;
     }
-
-    &__block{
-        margin: 0 auto;
-    }
-
-    &__list{
-        display: flex;
-        align-items: normal;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 0;
-    }
-
-    &__item{
-        width: calc(100% / 4);
-        list-style: none;
-        border-right: solid 4px #fff;
-        border-bottom: solid 4px #fff;
-        
-        @media (min-width: 768px) {
-            padding: 20px 40px 60px;
-        }
-
-        &__img{
-            width: fit-content;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: auto;
-        }
-
-        &--01{
-            width: 50%;
-        }
-
-        &--02{
-            width: 100%;
-        }
-
-        &--05{
-            width: 70%;
-        }
-
-        &--06{
-            width: 50%;
-        }
-
-        &--07{
-            width: 80%;
-        }
-
-        &--08{
-            width: 70%;
-        }
-
-        .c-product__link{
-            text-decoration: none;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 2rem;
-            height: 100%;
-            margin: 0 auto;
-        }
-    }
-
-    &__content{
-        padding-top: 2rem;
-        margin: 0 auto;
-        
-        .c-product-col{
-            text-align: center;
-
-            &__jp{
-                text-align: center;
-            }
-        }
-
-        .c-price{
-            text-align: center;
-        }
-    }
+  }
 }
