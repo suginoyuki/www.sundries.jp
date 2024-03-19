@@ -1,11 +1,6 @@
 @use '../scss/variable' as *;
 
 /* Webサイト全体のスタイル設定・初期化 */
-:root {
-  --min-lg: '(min-width: #{$lg}px)';
-  --min-md: '(min-width: #{$md}px)';
-}
-
 html {
   font-size: 62.5%;
   font-family: 'Noto Sans JP', sans-serif;

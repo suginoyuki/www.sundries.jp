@@ -10,17 +10,7 @@
 /*
   ブレークポイント
 */
-/* ブレークポイント（デスクトップ）（単位不要） */
-/* ブレークポイント（タブレット）（単位不要） */
-/* */
-@custom-media --min-lg (min-width: 1024px);
-@custom-media --min-md (min-width: 768px);
 /* Webサイト全体のスタイル設定・初期化 */
-:root {
-  --min-lg: "(min-width: 1024px)";
-  --min-md: "(min-width: 768px)";
-}
-
 html {
   font-size: 62.5%;
   font-family: "Noto Sans JP", sans-serif;

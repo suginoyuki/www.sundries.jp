@@ -140,6 +140,14 @@
     "prefix": "bg",
     "body": ["background: $$1;"]
   },
+  "min-md": {
+    "prefix": "min-md",
+    "body": ["@include over(min-md) {", "  $1", "}", ""]
+  },
+  "min-lg": {
+    "prefix": "min-lg",
+    "body": ["@include over(min-lg) {", "  $1", "}", ""]
+  },
   "hover": {
     "scope": "sass,scss,css",
     "prefix": "hover:astro",
