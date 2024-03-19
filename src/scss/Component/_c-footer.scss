@@ -1,7 +1,7 @@
 @use '../../scss/variable' as *;
 
 .c-footer {
-  background: $color-blue;
+  background: #f8a32f;
   position: relative;
   overflow: hidden;
   z-index: 0;
@@ -9,14 +9,16 @@
   // .c-footer__wrap
   &__wrap {
     position: relative;
+    width: calc(520 / 768 * 100vw);
     max-width: 100%;
     margin: 0 auto;
     z-index: 0;
-    padding-top: 15vw;
+    padding-top: 20vw;
 
     @media (min-width: 768px) {
       width: calc(1400 / 1500 * 100vw);
       max-width: calc(100% - 40px);
+      padding-top: 15vw;
     }
   }
 
@@ -72,20 +74,78 @@
       }
     }
 
+    .c-footer-btn {
+      text-align: center;
+
+      .c-btn-border {
+        border: solid 1px $color-gray-0;
+        border-radius: 50px;
+        padding: 2rem 70px 1.5rem 70px;
+        text-decoration: none;
+
+        @media (min-width: 768px) {
+          padding: 3.5rem 120px 2.5rem 120px;
+        }
+
+        .c-btn--btn {
+          margin: 0;
+          color: $color-gray-0;
+          display: inline-block;
+          font-size: 1.7rem;
+          font-family: '游ゴシック', serif;
+
+          @media (min-width: 768px) {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+
+    .c-footer-shop {
+      padding: 2px 0;
+      z-index: 1;
+
+      .c-footer-shop-del {
+        font-family: '游ゴシック', sans-serif;
+        text-align: center;
+        color: #fffaad;
+        font-size: 2rem;
+        letter-spacing: 0.05px;
+        line-height: 1.5;
+
+        .inline-block {
+          display: inline-block;
+        }
+
+        @media (min-width: 768px) {
+          text-align: center;
+        }
+      }
+    }
+
     .c-footer__sns {
       display: flex;
       justify-content: center;
       gap: 3rem;
 
-      // .c-footer__sns-item
       &-item {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
         border: solid 1px $color-gray-0;
         border-radius: 50px;
+
+        @media (min-width: 768px) {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 80px;
+          height: 80px;
+          border: solid 1px $color-gray-0;
+          border-radius: 50px;
+        }
       }
     }
   }
@@ -94,16 +154,16 @@
     position: absolute;
 
     &--01 {
-      bottom: 0rem;
-      left: -4%;
+      bottom: 23rem;
+      left: calc(-55 / 375 * 100vw);
 
       @media (min-width: 768px) {
-        top: 45rem;
+        top: 35rem;
         left: -4%;
       }
 
       img {
-        width: calc(80 / 375 * 100vw);
+        width: calc(90 / 375 * 100vw);
 
         @media (min-width: 768px) {
           width: calc(280 / 1500 * 100vw);
@@ -112,40 +172,50 @@
     }
 
     &--02 {
-      width: 120px;
-      height: 120px;
+      width: 50px;
+      height: 50px;
       background: rgba(199, 199, 199, 0.5);
       aspect-ratio: 1 / 1;
       transform: rotate(45deg);
+      bottom: 4rem;
+      left: -3rem;
 
       @media (min-width: 768px) {
         bottom: 15rem;
         left: calc(320 / 1500 * 100vw);
+        width: 100px;
+        height: 100px;
       }
     }
 
     &--03 {
+      bottom: 9rem;
+      right: calc(50 / 1500 * 100%);
+
       @media (min-width: 768px) {
-        top: 60rem;
         right: calc(120 / 1500 * 100vw);
       }
 
       img {
+        width: calc(70 / 375 * 100vw);
+
         @media (min-width: 768px) {
-          width: calc(180 / 1500 * 100vw);
+          width: calc(220 / 1500 * 100vw);
         }
       }
     }
 
     &--04 {
-      width: 200px;
-      height: 200px;
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
       background: rgba(199, 199, 199, 0.5);
+      top: 3rem;
+      right: calc(-500 / 1500 * 100vw);
 
       @media (min-width: 768px) {
-        width: 340px;
-        height: 340px;
+        width: 300px;
+        height: 300px;
         top: 4rem;
         right: calc(-110 / 1500 * 100vw);
       }
@@ -166,13 +236,19 @@
     .c-footer-top {
       margin-top: 5rem;
       width: 100%;
-      height: 2px;
+      height: 1px;
       background: $color-gray-0;
 
-      .c-footer-top-text {
-        padding: 1rem 0 1rem 0;
+      .c-footer-top-btn {
+        text-decoration: none;
+      }
+
+      .c-footer-top-btn-text {
+        padding: 1.2rem 0 1rem 0;
         color: $color-gray-0;
-        font-size: 2rem;
+        font-size: 1.6rem;
+        font-weight: 400;
+        font-family: '游明朝', sans-serif;
         display: flex;
         justify-content: center;
       }

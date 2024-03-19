@@ -1209,22 +1209,24 @@ body {
 }
 
 .c-footer {
-  background: #314e88;
+  background: #f8a32f;
   position: relative;
   overflow: hidden;
   z-index: 0;
 }
 .c-footer__wrap {
   position: relative;
+  width: 67.7083333333vw;
   max-width: 100%;
   margin: 0 auto;
   z-index: 0;
-  padding-top: 15vw;
+  padding-top: 20vw;
 }
 @media (min-width: 768px) {
   .c-footer__wrap {
     width: 93.3333333333vw;
     max-width: calc(100% - 40px);
+    padding-top: 15vw;
   }
 }
 .c-footer__label {
@@ -1276,6 +1278,52 @@ body {
     font-size: 1.6vw;
   }
 }
+.c-footer__label .c-footer-btn {
+  text-align: center;
+}
+.c-footer__label .c-footer-btn .c-btn-border {
+  border: solid 1px #fff;
+  border-radius: 50px;
+  padding: 2rem 70px 1.5rem 70px;
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+  .c-footer__label .c-footer-btn .c-btn-border {
+    padding: 3.5rem 120px 2.5rem 120px;
+  }
+}
+.c-footer__label .c-footer-btn .c-btn-border .c-btn--btn {
+  margin: 0;
+  color: #fff;
+  display: inline-block;
+  font-size: 1.7rem;
+  font-family: "游ゴシック", serif;
+}
+@media (min-width: 768px) {
+  .c-footer__label .c-footer-btn .c-btn-border .c-btn--btn {
+    font-size: 2rem;
+  }
+}
+.c-footer__label .c-footer-shop {
+  padding: 2px 0;
+  z-index: 1;
+}
+.c-footer__label .c-footer-shop .c-footer-shop-del {
+  font-family: "游ゴシック", sans-serif;
+  text-align: center;
+  color: #fffaad;
+  font-size: 2rem;
+  letter-spacing: 0.05px;
+  line-height: 1.5;
+}
+.c-footer__label .c-footer-shop .c-footer-shop-del .inline-block {
+  display: inline-block;
+}
+@media (min-width: 768px) {
+  .c-footer__label .c-footer-shop .c-footer-shop-del {
+    text-align: center;
+  }
+}
 .c-footer__label .c-footer__sns {
   display: flex;
   justify-content: center;
@@ -1285,26 +1333,37 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   border: solid 1px #fff;
   border-radius: 50px;
+}
+@media (min-width: 768px) {
+  .c-footer__label .c-footer__sns-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border: solid 1px #fff;
+    border-radius: 50px;
+  }
 }
 .c-footer__deco {
   position: absolute;
 }
 .c-footer__deco--01 {
-  bottom: 0rem;
-  left: -4%;
+  bottom: 23rem;
+  left: -14.6666666667vw;
 }
 @media (min-width: 768px) {
   .c-footer__deco--01 {
-    top: 45rem;
+    top: 35rem;
     left: -4%;
   }
 }
 .c-footer__deco--01 img {
-  width: 21.3333333333vw;
+  width: 24vw;
 }
 @media (min-width: 768px) {
   .c-footer__deco--01 img {
@@ -1312,39 +1371,51 @@ body {
   }
 }
 .c-footer__deco--02 {
-  width: 120px;
-  height: 120px;
+  width: 50px;
+  height: 50px;
   background: rgba(199, 199, 199, 0.5);
   aspect-ratio: 1/1;
   transform: rotate(45deg);
+  bottom: 4rem;
+  left: -3rem;
 }
 @media (min-width: 768px) {
   .c-footer__deco--02 {
     bottom: 15rem;
     left: 21.3333333333vw;
+    width: 100px;
+    height: 100px;
   }
+}
+.c-footer__deco--03 {
+  bottom: 9rem;
+  right: 3.3333333333%;
 }
 @media (min-width: 768px) {
   .c-footer__deco--03 {
-    top: 60rem;
     right: 8vw;
   }
 }
+.c-footer__deco--03 img {
+  width: 18.6666666667vw;
+}
 @media (min-width: 768px) {
   .c-footer__deco--03 img {
-    width: 12vw;
+    width: 14.6666666667vw;
   }
 }
 .c-footer__deco--04 {
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   background: rgba(199, 199, 199, 0.5);
+  top: 3rem;
+  right: -33.3333333333vw;
 }
 @media (min-width: 768px) {
   .c-footer__deco--04 {
-    width: 340px;
-    height: 340px;
+    width: 300px;
+    height: 300px;
     top: 4rem;
     right: -7.3333333333vw;
   }
@@ -1362,15 +1433,125 @@ body {
 .c-footer__copy .c-footer-top {
   margin-top: 5rem;
   width: 100%;
-  height: 2px;
+  height: 1px;
   background: #fff;
 }
-.c-footer__copy .c-footer-top .c-footer-top-text {
-  padding: 1rem 0 1rem 0;
+.c-footer__copy .c-footer-top .c-footer-top-btn {
+  text-decoration: none;
+}
+.c-footer__copy .c-footer-top .c-footer-top-btn-text {
+  padding: 1.2rem 0 1rem 0;
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: "游明朝", sans-serif;
   display: flex;
   justify-content: center;
+}
+
+.c-product {
+  background: #ec643e;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+.c-product__wrap {
+  position: relative;
+  width: 67.7083333333vw;
+  max-width: 100%;
+  margin: 0 auto;
+  z-index: 0;
+  padding-top: 20vw;
+}
+@media (min-width: 768px) {
+  .c-product__wrap {
+    width: 93.3333333333vw;
+    max-width: calc(100% - 40px);
+    padding-top: 15vw;
+  }
+}
+.c-product__title {
+  font-family: "Crimson Text", serif;
+  font-weight: 700;
+  text-align: center;
+  z-index: 20;
+}
+.c-product__title-jp {
+  text-align: center;
+}
+.c-product__border {
+  border-top: solid 4px #fff;
+  border-left: solid 4px #fff;
+}
+.c-product__block {
+  margin: 0 auto;
+}
+.c-product__list {
+  display: flex;
+  align-items: normal;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+}
+.c-product__item {
+  width: 25%;
+  list-style: none;
+  border-right: solid 4px #fff;
+  border-bottom: solid 4px #fff;
+}
+@media (min-width: 768px) {
+  .c-product__item {
+    padding: 20px 40px 60px;
+  }
+}
+.c-product__item__img {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.c-product__item--01 {
+  width: 50%;
+}
+.c-product__item--02 {
+  width: 100%;
+}
+.c-product__item--05 {
+  width: 70%;
+}
+.c-product__item--06 {
+  width: 50%;
+}
+.c-product__item--07 {
+  width: 80%;
+}
+.c-product__item--08 {
+  width: 70%;
+}
+.c-product__item .c-product__link {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  height: 100%;
+  margin: 0 auto;
+}
+.c-product__content {
+  padding-top: 2rem;
+  margin: 0 auto;
+}
+.c-product__content .c-product-col {
+  text-align: center;
+}
+.c-product__content .c-product-col__jp {
+  text-align: center;
+}
+.c-product__content .c-price {
+  text-align: center;
 }
 
 .c-container {
