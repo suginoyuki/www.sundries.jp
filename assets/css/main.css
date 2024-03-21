@@ -791,9 +791,8 @@ body {
     flex-wrap: nowrap;
     width: 117rem;
     max-width: 100%;
-    margin-left: auto;
-    margin-right: 3.3333333333vw;
     gap: 8rem;
+    transform: translateX(5.3333333333vw);
   }
 }
 .c-about__thumb {
@@ -1098,11 +1097,15 @@ body {
 .c-scene--blue {
   background: #3c87c8;
 }
+.c-scene--blue .c-scene__loop {
+  background: #3c87c8;
+}
 .c-scene__loop {
   position: absolute;
   display: flex;
   padding: 0.5rem;
   top: 0;
+  z-index: 10;
 }
 @media screen and (min-width: 768px) {
   .c-scene__loop {
@@ -1153,7 +1156,8 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .c-scene__wrap {
-    max-width: calc(100% - 300px);
+    width: 117rem;
+    max-width: calc(100% - 20rem);
     padding: 10rem 0;
   }
 }
@@ -1187,10 +1191,50 @@ body {
 }
 @media screen and (min-width: 768px) {
   .c-scene__deco--02 {
-    width: 49rem;
-    height: 33rem;
+    width: 32.6666666667vw;
+    height: 22vw;
     top: 50rem;
     border: 2px solid #fff;
+  }
+}
+.c-scene__deco--03 {
+  width: 80vw;
+  aspect-ratio: 1/1;
+  top: 57%;
+  left: 0;
+  background: transparent;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  transform: translate(-70%, 57%);
+  z-index: -1;
+}
+@media screen and (min-width: 768px) {
+  .c-scene__deco--03 {
+    top: 45%;
+    width: min(53rem, 35.3333333333vw);
+    transform: translate(-70%, 45%);
+  }
+}
+.c-scene__deco--04 {
+  position: absolute;
+  top: 29.3333333333rem;
+  bottom: auto;
+  right: 18.6666666667vw;
+  z-index: 3;
+}
+@media screen and (min-width: 1024px) {
+  .c-scene__deco--04 {
+    top: auto;
+    bottom: -16rem;
+    right: -8vw;
+  }
+}
+.c-scene__deco--04 img {
+  width: 53.3333333333vw;
+}
+@media screen and (min-width: 1024px) {
+  .c-scene__deco--04 img {
+    width: min(38.1rem, 25.4vw);
   }
 }
 .c-scene__heading {
@@ -1229,7 +1273,7 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 7rem;
-  gap: 3rem;
+  gap: 5rem;
   z-index: 0;
 }
 @media screen and (min-width: 1024px) {
@@ -1246,9 +1290,28 @@ body {
     margin-top: 10rem;
   }
 }
+.c-scene__content--reverse::before {
+  position: absolute;
+  content: "";
+  top: -10rem;
+  right: min(15rem, 10vw);
+  width: 50%;
+  height: 0.1rem;
+  background-image: linear-gradient(to right, #fff 8px, transparent 8px);
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  background-position: left bottom;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+.c-scene__content--reverse .c-scene__content-img {
+  transform: translateX(40%);
+}
 @media screen and (min-width: 1024px) {
   .c-scene__content--reverse .c-scene__content-img {
-    margin-top: -20rem;
+    width: 20.5333333333vw;
+    margin-top: -13.3333333333vw;
+    transform: translateX(0%);
   }
 }
 .c-scene__content-deco {
@@ -1256,6 +1319,7 @@ body {
   top: -5rem;
   left: 0;
   transform: translate(-40%, -80%);
+  z-index: 2;
 }
 @media screen and (min-width: 768px) {
   .c-scene__content-deco {
@@ -1267,17 +1331,20 @@ body {
 }
 @media screen and (min-width: 768px) {
   .c-scene__content-deco img {
-    width: 30.2666666667vw;
+    width: min(45.4rem, 30.2666666667vw);
   }
 }
 .c-scene__content-img {
+  position: relative;
   display: flex;
   flex: 0 0 auto;
   max-width: 100%;
   transform: translateX(-40%);
+  z-index: 0;
 }
 @media screen and (min-width: 1024px) {
   .c-scene__content-img {
+    width: 34.6666666667vw;
     transform: translate(0);
   }
 }
@@ -1295,7 +1362,7 @@ body {
   .c-scene__content-textarea-img {
     position: inherit;
     margin-bottom: 4rem;
-    width: 23.4rem;
+    width: 15.6vw;
   }
 }
 .c-scene__content-label {
@@ -1304,6 +1371,11 @@ body {
 @media screen and (min-width: 768px) {
   .c-scene__content-label {
     line-height: 2.5;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .c-scene__product {
+    margin-top: 8rem;
   }
 }
 
@@ -1937,6 +2009,14 @@ body {
   .c-heading-en--large {
     font-size: 10.5rem;
   }
+}
+
+.c-pickup__loop {
+  display: flex;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  padding: 2rem 0;
 }
 
 .u-text-center {

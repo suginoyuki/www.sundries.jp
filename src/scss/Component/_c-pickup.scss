@@ -1,0 +1,12 @@
+@use '../../scss/variable' as *;
+
+.c-pickup {
+  // .c-pickup__loop
+  &__loop {
+    display: flex;
+    border-top: 2px solid $color-gray-0;
+    border-bottom: 2px solid $color-gray-0;
+    color: $color-gray-0;
+    padding: 2rem 0;
+  }
+}

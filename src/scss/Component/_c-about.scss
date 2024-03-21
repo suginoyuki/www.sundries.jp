@@ -20,9 +20,8 @@
       flex-wrap: nowrap;
       width: 117rem;
       max-width: 100%;
-      margin-left: auto;
-      margin-right: calc(50 / 1500 * 100vw);
       gap: 8rem;
+      transform: translateX(calc(80 / 1500 * 100vw));
     }
   }
 
