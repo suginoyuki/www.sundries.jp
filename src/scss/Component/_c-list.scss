@@ -19,6 +19,7 @@
   // .c-list-card__item
   &__item {
     width: 100%;
+    max-width: 36rem;
 
     @include over(min-md) {
       width: calc(100% / 2);

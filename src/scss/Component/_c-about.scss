@@ -76,6 +76,7 @@
     &-label {
       font-size: 1.6rem;
       line-height: 2;
+      color: $color-gray-0;
 
       @include over(min-lg) {
         font-size: 1.8rem;

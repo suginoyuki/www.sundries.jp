@@ -1,0 +1,49 @@
+@use '../../scss/variable' as *;
+
+.l-header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 6rem;
+  padding: 0 1.5rem;
+  background: $color-gray-EEEEEE;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 10;
+
+  @include over(min-lg) {
+    padding: 0 3rem;
+  }
+
+  // .l-header__logo
+  &__logo {
+    width: 130rem;
+    max-width: 100%;
+    margin: 0 auto;
+    font-size: 2.4rem;
+    line-height: 1.5;
+    font-weight: 500;
+    font-family: $font-heading;
+
+    @include over(min-md) {
+      font-size: 3rem;
+    }
+  }
+
+  // .l-header__link
+  &__link {
+    text-decoration: none;
+    color: $color-gray-555555;
+    transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+
+    @media (any-hover: hover) {
+      &:hover,
+      &:focus-visible {
+        opacity: 0.8;
+        color: $color-blue-3C87C8;
+        text-decoration: none;
+      }
+    }
+  }
+}

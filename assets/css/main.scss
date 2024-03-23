@@ -21,7 +21,11 @@
 @use '../../src/scss/Component/c-list' as *;
 @use '../../src/scss/Component/c-heading' as *;
 @use '../../src/scss/Component/c-pickup' as *;
+@use '../../src/scss/Component/c-card' as *;
 
-// utility
-@use '../../src/scss/utility/u-text' as *;
-@use '../../src/scss/utility/u-flex' as *;
+// Layout
+@use '../../src/scss/Layout/l-header' as *;
+
+// Utility
+@use '../../src/scss/Utility/u-text' as *;
+@use '../../src/scss/Utility/u-flex' as *;

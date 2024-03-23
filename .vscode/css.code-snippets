@@ -134,11 +134,11 @@
   },
   "min-md": {
     "prefix": "min-md",
-    "body": ["@include over(min-md) {", "  $1", "}", ""]
+    "body": ["@include over(min-md) {", "  $1", "}"]
   },
   "min-lg": {
     "prefix": "min-lg",
-    "body": ["@include over(min-lg) {", "  $1", "}", ""]
+    "body": ["@include over(min-lg) {", "  $1", "}"]
   },
   "hover": {
     "scope": "sass,scss,css",

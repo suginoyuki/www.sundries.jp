@@ -33,7 +33,7 @@
       border-right: none;
       border-bottom: 2px solid $color-gray-0;
 
-      @include over(min-lg) {
+      @include over(min-md) {
         left: 0;
         border-right: 2px solid $color-gray-0;
       }
@@ -43,7 +43,7 @@
     &--right {
       display: none;
 
-      @include over(min-lg) {
+      @include over(min-md) {
         display: block;
         right: 0;
         border-left: 2px solid $color-gray-0;
@@ -56,10 +56,13 @@
       writing-mode: inherit;
       animation: loop-text 30s linear 0s infinite normal forwards;
 
-      @include over(min-lg) {
-        font-size: 5rem;
+      @include over(min-md) {
         writing-mode: vertical-lr;
         animation: loop-text-col 70s linear 0s infinite normal forwards;
+      }
+
+      @include over(min-lg) {
+        font-size: 5rem;
       }
     }
   }
@@ -68,10 +71,15 @@
   &__wrap {
     position: relative;
     width: 100%;
-    max-width: calc(100% - 6rem);
+    max-width: calc(100% - 4rem);
     margin: 0 auto;
     padding: 8rem 0;
     z-index: 0;
+
+    @include over(min-md) {
+      max-width: calc(100% - 15rem);
+      padding: 5rem 0 8rem 0;
+    }
 
     @include over(min-lg) {
       width: 117rem;
@@ -89,6 +97,10 @@
       top: 38rem;
       right: -2rem;
       z-index: 1;
+
+      @include over(min-md) {
+        top: 20rem;
+      }
 
       @include over(min-lg) {
         top: 30rem;
@@ -146,14 +158,23 @@
       right: calc((70 / 375 * 100vw));
       z-index: 3;
 
-      @include over(min-lg) {
+      @include over(min-md) {
         top: auto;
+        bottom: calc((50 / 768 * 100) * -1vw);
+        right: calc((50 / 768 * 100) * -1vw);
+      }
+
+      @include over(min-lg) {
         bottom: calc((240 / 1500 * 100) * -1rem);
         right: calc((120 / 1500 * 100) * -1vw);
       }
 
       img {
         width: calc(200 / 375 * 100vw);
+
+        @include over(min-md) {
+          width: calc(200 / 768 * 100vw);
+        }
 
         @include over(min-lg) {
           width: min(38.1rem, calc(381 / 1500 * 100vw));
@@ -203,6 +224,10 @@
     gap: 5rem;
     z-index: 0;
 
+    @include over(min-md) {
+      flex-wrap: nowrap;
+    }
+
     @include over(min-lg) {
       margin-top: 15rem;
     }
@@ -234,10 +259,14 @@
       .c-scene__content-img {
         transform: translateX(40%);
 
+        @include over(min-md) {
+          width: calc(200 / 768 * 100vw);
+          transform: translateX(0);
+        }
+
         @include over(min-lg) {
           width: calc(308 / 1500 * 100vw);
           margin-top: calc((200 / 1500 * 100) * -1vw);
-          transform: translateX(0%);
         }
       }
     }
@@ -272,9 +301,13 @@
       transform: translateX(-40%);
       z-index: 0;
 
+      @include over(min-md) {
+        width: calc(250 / 768 * 100vw);
+        transform: translate(0);
+      }
+
       @include over(min-lg) {
         width: calc(520 / 1500 * 100vw);
-        transform: translate(0);
       }
     }
 
@@ -290,7 +323,12 @@
         right: -1rem;
         width: calc(120 / 375 * 100vw);
 
+        @include over(min-md) {
+          display: none;
+        }
+
         @include over(min-lg) {
+          display: block;
           position: inherit;
           margin-bottom: 4rem;
           width: calc(234 / 1500 * 100vw);
@@ -301,6 +339,7 @@
     // .c-scene__content-label
     &-label {
       line-height: 2;
+      color: $color-gray-0;
 
       @include over(min-md) {
         line-height: 2.5;
@@ -312,6 +351,33 @@
   &__product {
     @include over(min-lg) {
       margin-top: 8rem;
+    }
+
+    // .c-scene__product-wrap
+    &-wrap {
+      width: 100%;
+      margin: 0 auto;
+      max-width: 100%;
+
+      @include over(min-md) {
+        max-width: calc(100% - 100px);
+      }
+
+      @include over(min-lg) {
+        max-width: calc(100% - 140px);
+      }
+
+      .c-text-loop {
+        font-size: 5rem;
+
+        @include over(min-md) {
+          font-size: 5rem;
+        }
+
+        @include over(min-lg) {
+          font-size: 10rem;
+        }
+      }
     }
   }
 }

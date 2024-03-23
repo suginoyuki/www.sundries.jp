@@ -75,3 +75,29 @@
     }
   }
 }
+
+.c-heading-col {
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  color: $color-text;
+  gap: 1rem;
+
+  // .c-heading-col__jp
+  &__jp {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  // .c-heading-col__en
+  &__en {
+    font-size: clamp(1.8rem, calc(18 / 375 * 100vw), 2.2rem);
+    font-weight: 700;
+    line-height: 1.5;
+
+    @include over(min-md) {
+      font-size: 3rem;
+    }
+  }
+}

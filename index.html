@@ -14,10 +14,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
   <!-- -->
   <link rel="stylesheet" href="assets/css/main.css">
+  <script src="assets/js/main.js"></script>
   <title>雑貨屋さんのホームページ</title>
 </head>
 
 <body>
+  <header class="l-header">
+    <h1 class="l-header__logo">
+      <a href="#" class="l-header__link">ChaCha&nbsp;MART</a>
+    </h1>
+  </header>
+
   <main class="">
     <section class="c-mv">
       <div class="c-mv__wrap">
@@ -353,26 +360,47 @@
       </div>
 
       <div class="c-pickup c-scene__product">
-        <div class="c-pickup__loop">
-          <span class="c-text-loop">
-            Special&nbsp;item&nbsp;Special&nbsp;item
-          </span>
-          <span class="c-text-loop">
-            Special&nbsp;item&nbsp;Special&nbsp;item
-          </span>
-          <span class="c-text-loop">
-            Special&nbsp;item&nbsp;Special&nbsp;item
-          </span>
-          <span class="c-text-loop">
-            Special&nbsp;item&nbsp;Special&nbsp;item
-          </span>
+        <div class="c-scene__product-wrap">
+
+          <div class="c-pickup__loop">
+            <span class="c-text-loop">
+              Special&nbsp;item&nbsp;Special&nbsp;item
+            </span>
+            <span class="c-text-loop">
+              Special&nbsp;item&nbsp;Special&nbsp;item
+            </span>
+            <span class="c-text-loop">
+              Special&nbsp;item&nbsp;Special&nbsp;item
+            </span>
+            <span class="c-text-loop">
+              Special&nbsp;item&nbsp;Special&nbsp;item
+            </span>
+          </div>
+
+          <ul class="c-card-product">
+            <li class="c-card-product__item">
+              <div class="c-card-product__wrap">
+                <figure class="c-card-product__thumb">
+                  <img src="assets/images/scene/scene-item01.png"
+                    srcset="assets/images/scene/scene-item01.png 238w, assets/images/scene/scene-item01@2x.png 478w"
+                    sizes="(min-width:120px) 238px, 120px" decoding="async" loading="lazy" width="238" height="236"
+                    class="" />
+                </figure>
+
+                <div class="c-card-product__content">
+                  <heading class="c-heading-col">
+                    <span class="c-heading-col__jp">マグカップ</span>
+                    <h3 class="c-heading-col__en">Mug</h3>
+                  </heading>
+
+                  <span class="c-card-product__price">
+                    本体価格：<span class="c-card-product__price-label">¥30,000</span>（税込）
+                  </span>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
-
-        <!-- <ul class="c-card-product">
-          <li class="c-card-product__item">
-
-          </li>
-        </ul> -->
       </div>
     </section>
 
