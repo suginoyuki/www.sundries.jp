@@ -8,3 +8,20 @@ window.addEventListener('scroll', function () {
     elm.style.opacity = '0'
   }
 })
+
+// インクルード
+function includeHTML(url, targetId) {
+  const xhr = new XMLHttpRequest()
+  xhr.open('GET', url, true)
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      const html = xhr.responseText
+      const target = document.querySelector(targetId)
+      target.insertAdjacentHTML('afterbegin', html)
+    }
+  }
+  xhr.send()
+}
+
+includeHTML('inc/header.html', '#header')
+includeHTML('inc/footer.html', '#footer')

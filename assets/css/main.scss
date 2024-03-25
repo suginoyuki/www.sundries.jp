@@ -10,7 +10,6 @@
 @use '../../src/scss/Component/c-mv' as *;
 @use '../../src/scss/Component/c-about' as *;
 @use '../../src/scss/Component/c-scene' as *;
-@use '../../src/scss/Component/c-footer' as *;
 @use '../../src/scss/Component/c-product' as *;
 
 // Component
@@ -25,7 +24,9 @@
 
 // Layout
 @use '../../src/scss/Layout/l-header' as *;
+@use '../../src/scss/Layout/l-footer' as *;
 
 // Utility
 @use '../../src/scss/Utility/u-text' as *;
 @use '../../src/scss/Utility/u-flex' as *;
+@use '../../src/scss/Utility/u-overflow' as *;

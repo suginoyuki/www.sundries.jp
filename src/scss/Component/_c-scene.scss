@@ -3,12 +3,27 @@
 .c-scene {
   position: relative;
   width: 100%;
+  padding-bottom: 5rem;
   overflow: hidden;
   z-index: 0;
 
   // .c-scene--blue
   &--blue {
     background: $color-blue-3C87C8;
+
+    &::before {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: 50%;
+      width: calc(100% + 4px);
+      max-width: calc(100% - 140px);
+      margin: 0 auto;
+      height: 5rem;
+      background: $color-blue-3C87C8;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
 
     .c-scene__loop {
       background: $color-blue-3C87C8;

@@ -58,3 +58,39 @@
     }
   }
 }
+
+.c-btn-glance {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: $color-gray-0;
+  padding: 1rem 2rem;
+  z-index: 0;
+
+  // .c-btn-glance__icon
+  &__icon {
+    display: flex;
+    flex: 0 0 auto;
+    width: 3.3rem;
+    margin-right: 1.5rem;
+  }
+
+  // .c-btn-glance__label
+  &__label {
+    font-size: 1.6rem;
+    font-weight: 400;
+
+    @include over(min-md) {
+      font-size: 1.8rem;
+    }
+  }
+
+  // .c-btn-glance__arrow
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    fill: #333;
+    transform: translateY(-50%);
+  }
+}
