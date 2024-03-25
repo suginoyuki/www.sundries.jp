@@ -18,3 +18,43 @@
     }
   }
 }
+
+.c-btn-product {
+  position: relative;
+  width: 100%;
+  min-width: 13rem;
+  background: $color-gray-0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  overflow: hidden;
+  z-index: 0;
+
+  // .c-btn-product__label
+  &__label {
+    font-size: 1.6rem;
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  // .c-btn-product__arrow
+  &__arrow {
+    &:first-child {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(-200%, -50%);
+      transition: transform 0.4s ease-in-out;
+    }
+
+    &:last-child {
+      display: flex;
+      flex: 0 0 auto;
+      width: 1.5rem;
+      width: 2rem;
+      transform: translate(0);
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+}

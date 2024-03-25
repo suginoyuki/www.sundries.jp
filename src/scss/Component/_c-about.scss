@@ -86,28 +86,6 @@
         line-height: 2.3;
       }
     }
-
-    // .c-about__content-deco
-    &-deco {
-      position: absolute;
-      top: calc((120 / 375 * 100) * -1%);
-      right: calc((60 / 375 * 100) * -1%);
-
-      @include over(min-md) {
-        top: auto;
-        right: auto;
-        bottom: calc((200 / 1500 * 100) * -1%);
-        left: 0;
-      }
-
-      img {
-        width: calc(200 / 375 * 100vw);
-
-        @include over(min-md) {
-          width: calc(381 / 1500 * 100vw);
-        }
-      }
-    }
   }
 
   // .c-about__deco
@@ -278,7 +256,7 @@
     // .c-about-list__caption-label
     &-label {
       margin-top: 0.5rem;
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       font-weight: 400;
     }
   }
