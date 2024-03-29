@@ -4,7 +4,8 @@
   display: flex;
   flex: 0 0 auto;
   line-height: 1;
-  font-size: 10rem;
+  font-size: max(5rem, 6.19vw);
+  padding-left: 4%;
   font-family: $font-heading;
   animation: loop-text 30s linear 0s infinite normal forwards;
 

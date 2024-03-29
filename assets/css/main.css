@@ -1801,7 +1801,8 @@ body {
   display: flex;
   flex: 0 0 auto;
   line-height: 1;
-  font-size: 10rem;
+  font-size: max(5rem, 6.19vw);
+  padding-left: 4%;
   font-family: "Crimson Text", serif;
   animation: loop-text 30s linear 0s infinite normal forwards;
 }
@@ -2344,24 +2345,26 @@ body {
   text-align: center;
 }
 .l-footer__label .l-footer-btn .c-btn-border {
-  background: #ec643e;
   margin-left: auto;
-  border: solid 1px #fff;
-  border-radius: 50px;
   padding: 2rem 70px 1.5rem 70px;
   text-decoration: none;
   color: #fff;
-  transition-duration: 0.3s;
+  background: transparent;
+  border-radius: 50px;
+  border: solid 1px #fff;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 @media (min-width: 768px) {
   .l-footer__label .l-footer-btn .c-btn-border {
     padding: 3.5rem 120px 2.5rem 120px;
   }
 }
-.l-footer__label .l-footer-btn .c-btn-border:hover {
-  background: #fff;
-  color: #ec643e;
-  transform: scale(1.1);
+@media (any-hover: hover) {
+  .l-footer__label .l-footer-btn .c-btn-border:hover, .l-footer__label .l-footer-btn .c-btn-border:focus-visible {
+    color: #f8a32f;
+    background: #fff;
+    transform: scale(1.1);
+  }
 }
 .l-footer__label .l-footer-btn .c-btn-border .c-btn-btn {
   position: relative;
@@ -2510,33 +2513,6 @@ body {
 .l-footer__copy small {
   font-size: 1.5rem;
   color: #fff;
-}
-.l-footer__copy .l-footer-top {
-  margin-top: 5rem;
-  width: 100%;
-  height: 1px;
-  background: #fff;
-}
-.l-footer__copy .l-footer-top .l-footer-top-btn {
-  text-decoration: none;
-  margin: 0;
-}
-.l-footer__copy .l-footer-top .l-footer-top-btn-text {
-  padding: 1rem 0 0.7rem 0;
-  color: #fff;
-  font-size: 1.6rem;
-  font-weight: 400;
-  font-family: "游明朝", sans-serif;
-  display: flex;
-  justify-content: center;
-}
-@media screen and (min-width: 768px) {
-  .l-footer__copy .l-footer-top .l-footer-top-btn-text {
-    padding: 1.2rem 0 1rem 0;
-  }
-}
-.l-footer__copy .l-footer-top .l-footer-top-btn-text:hover {
-  text-decoration: underline;
 }
 
 .u-text-center {
