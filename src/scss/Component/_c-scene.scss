@@ -20,6 +20,21 @@
     }
   }
 
+  // .c-scene--orange
+  &--orange {
+    background: $color-orange;
+
+    .c-scene__loop {
+      background: $color-orange;
+    }
+
+    .c-heading-num {
+      &::after {
+        background: $color-orange;
+      }
+    }
+  }
+
   // .c-scene__loop
   &__loop {
     position: absolute;

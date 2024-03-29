@@ -1086,6 +1086,15 @@ body {
 .c-scene--blue .c-scene__loop {
   background: #3c87c8;
 }
+.c-scene--orange {
+  background: #ec643e;
+}
+.c-scene--orange .c-scene__loop {
+  background: #ec643e;
+}
+.c-scene--orange .c-heading-num::after {
+  background: #ec643e;
+}
 .c-scene__loop {
   position: absolute;
   display: flex;
