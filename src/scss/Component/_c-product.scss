@@ -1,7 +1,7 @@
 @use '../../scss/variable' as *;
 
 .c-product {
-  background: $color-orange;
+  background: $color-yellow;
   position: relative;
   overflow: hidden;
   z-index: 0;
@@ -44,23 +44,23 @@
   }
 
   &__border {
-    border-top: solid 4px #fff;
-    border-left: solid 4px #fff;
+    border-top: solid 2px #fff;
+    border-left: solid 2px #fff;
 
-    @media (max-width: 1024px) {
-      border-top: solid 2.5px #fff;
-      border-left: solid 2.5px #fff;
+    @media (min-width: 1024px) {
+      border-top: solid 4px #fff;
+      border-left: solid 4px #fff;
     }
   }
 
   &__text {
     overflow: hidden;
-    border-right: solid 4px #fff;
-    border-bottom: solid 4px #fff;
+    border-right: solid 2px #fff;
+    border-bottom: solid 2px #fff;
 
-    @media (max-width: 1024px) {
-      border-right: solid 2.5px #fff;
-      border-bottom: solid 2.5px #fff;
+    @media (min-width: 1024px) {
+      border-right: solid 4px #fff;
+      border-bottom: solid 4px #fff;
     }
   }
 
@@ -91,17 +91,14 @@
     flex-direction: column;
     flex: 1 1 auto;
     list-style: none;
-    border-right: solid 4px #fff;
-    border-bottom: solid 4px #fff;
+    border-right: solid 2px #fff;
+    border-bottom: solid 2px #fff;
+    width: calc(100% / 2);
 
     @media (min-width: 1024px) {
       width: calc(100% / 4);
-    }
-
-    @media (max-width: 1024px) {
-      width: calc(100% / 2);
-      border-right: solid 2.5px #fff;
-      border-bottom: solid 2.5px #fff;
+      border-right: solid 4px #fff;
+      border-bottom: solid 4px #fff;
     }
 
     &__img {
@@ -149,13 +146,22 @@
       width: 100%;
 
       @media (max-width: 1023px) {
-        width: 70%;
+        width: 77%;
+      }
+
+      @media (max-width: 700px) {
+        width: 88%;
       }
 
       .c-product-item-deco {
         width: 36%;
-        top: 10%;
-        right: 24%;
+        top: 7%;
+        right: 21%;
+
+        @media (min-width: 1023px) {
+          top: 10%;
+          right: 24%;
+        }
       }
     }
 
@@ -207,13 +213,23 @@
       .c-product-item-deco-left {
         width: 23%;
         top: 3%;
-        left: 16%;
+        left: 15%;
+
+        @include over(min-lg) {
+          top: 3%;
+          left: 16%;
+        }
       }
 
       .c-product-item-deco-right {
         width: 19%;
-        top: 3%;
-        right: 20%;
+        top: 2%;
+        right: 18%;
+
+        @include over(min-lg) {
+          top: 3%;
+          right: 20%;
+        }
       }
     }
 
@@ -221,8 +237,12 @@
       text-decoration: none;
       display: flex;
       flex-direction: column;
-      gap: 2rem;
+      gap: 1rem;
       height: 100%;
+
+      @include over(min-lg) {
+        gap: 2rem;
+      }
     }
   }
 
@@ -264,14 +284,6 @@
         font-size: clamp(0.938rem, -0.166rem + 0.76vw, 1.5rem);
         letter-spacing: 1.8px;
       }
-    }
-
-    .c-price {
-      min-height: 0;
-      text-align: center;
-      letter-spacing: 0.8px;
-      color: $color-gray-0;
-      font-size: clamp(0.938rem, 0.785rem + 0.76vw, 1.5rem);
     }
   }
 }

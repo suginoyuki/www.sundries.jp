@@ -1071,14 +1071,8 @@ body {
 .c-scene {
   position: relative;
   width: 100%;
-  padding-bottom: 5rem;
   overflow: hidden;
   z-index: 0;
-}
-@media screen and (min-width: 1024px) {
-  .c-scene {
-    padding-bottom: 10rem;
-  }
 }
 .c-scene--blue {
   background: #3c87c8;
@@ -1451,7 +1445,7 @@ body {
 }
 
 .c-product {
-  background: #ec643e;
+  background: #f8a32f;
   position: relative;
   overflow: hidden;
   z-index: 0;
@@ -1491,24 +1485,24 @@ body {
   font-weight: 300;
 }
 .c-product__border {
-  border-top: solid 4px #fff;
-  border-left: solid 4px #fff;
+  border-top: solid 2px #fff;
+  border-left: solid 2px #fff;
 }
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
   .c-product__border {
-    border-top: solid 2.5px #fff;
-    border-left: solid 2.5px #fff;
+    border-top: solid 4px #fff;
+    border-left: solid 4px #fff;
   }
 }
 .c-product__text {
   overflow: hidden;
-  border-right: solid 4px #fff;
-  border-bottom: solid 4px #fff;
+  border-right: solid 2px #fff;
+  border-bottom: solid 2px #fff;
 }
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
   .c-product__text {
-    border-right: solid 2.5px #fff;
-    border-bottom: solid 2.5px #fff;
+    border-right: solid 4px #fff;
+    border-bottom: solid 4px #fff;
   }
 }
 .c-product__block {
@@ -1536,19 +1530,15 @@ body {
   flex-direction: column;
   flex: 1 1 auto;
   list-style: none;
-  border-right: solid 4px #fff;
-  border-bottom: solid 4px #fff;
+  border-right: solid 2px #fff;
+  border-bottom: solid 2px #fff;
+  width: 50%;
 }
 @media (min-width: 1024px) {
   .c-product__item {
     width: 25%;
-  }
-}
-@media (max-width: 1024px) {
-  .c-product__item {
-    width: 50%;
-    border-right: solid 2.5px #fff;
-    border-bottom: solid 2.5px #fff;
+    border-right: solid 4px #fff;
+    border-bottom: solid 4px #fff;
   }
 }
 .c-product__item__img {
@@ -1591,13 +1581,24 @@ body {
 }
 @media (max-width: 1023px) {
   .c-product__item--03 {
-    width: 70%;
+    width: 77%;
+  }
+}
+@media (max-width: 700px) {
+  .c-product__item--03 {
+    width: 88%;
   }
 }
 .c-product__item--03 .c-product-item-deco {
   width: 36%;
-  top: 10%;
-  right: 24%;
+  top: 7%;
+  right: 21%;
+}
+@media (min-width: 1023px) {
+  .c-product__item--03 .c-product-item-deco {
+    top: 10%;
+    right: 24%;
+  }
 }
 .c-product__item--04 {
   width: 100%;
@@ -1639,19 +1640,36 @@ body {
 .c-product__item--08 .c-product-item-deco-left {
   width: 23%;
   top: 3%;
-  left: 16%;
+  left: 15%;
+}
+@media screen and (min-width: 1024px) {
+  .c-product__item--08 .c-product-item-deco-left {
+    top: 3%;
+    left: 16%;
+  }
 }
 .c-product__item--08 .c-product-item-deco-right {
   width: 19%;
-  top: 3%;
-  right: 20%;
+  top: 2%;
+  right: 18%;
+}
+@media screen and (min-width: 1024px) {
+  .c-product__item--08 .c-product-item-deco-right {
+    top: 3%;
+    right: 20%;
+  }
 }
 .c-product__item .c-product__link {
   text-decoration: none;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   height: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .c-product__item .c-product__link {
+    gap: 2rem;
+  }
 }
 .c-product__content {
   display: flex;
@@ -1691,13 +1709,6 @@ body {
   font-weight: 500;
   font-size: clamp(0.938rem, -0.166rem + 0.76vw, 1.5rem);
   letter-spacing: 1.8px;
-}
-.c-product__content .c-price {
-  min-height: 0;
-  text-align: center;
-  letter-spacing: 0.8px;
-  color: #fff;
-  font-size: clamp(0.938rem, 0.785rem + 0.76vw, 1.5rem);
 }
 
 .c-container {
@@ -2204,6 +2215,14 @@ body {
   width: 15rem;
 }
 
+.c-price {
+  min-height: 0;
+  text-align: center;
+  letter-spacing: 0.8px;
+  color: #fff;
+  font-size: clamp(0.938rem, 0.785rem + 0.76vw, 1.5rem);
+}
+
 .l-header {
   position: fixed;
   display: flex;
@@ -2290,6 +2309,7 @@ body {
 .l-footer__label-en {
   font-size: clamp(3rem, 16vw, 8rem);
   line-height: 1;
+  z-index: 10;
 }
 @media (min-width: 768px) {
   .l-footer__label-en {
@@ -2324,25 +2344,35 @@ body {
   text-align: center;
 }
 .l-footer__label .l-footer-btn .c-btn-border {
+  background: #ec643e;
+  margin-left: auto;
   border: solid 1px #fff;
   border-radius: 50px;
   padding: 2rem 70px 1.5rem 70px;
   text-decoration: none;
+  color: #fff;
+  transition-duration: 0.3s;
 }
 @media (min-width: 768px) {
   .l-footer__label .l-footer-btn .c-btn-border {
     padding: 3.5rem 120px 2.5rem 120px;
   }
 }
-.l-footer__label .l-footer-btn .c-btn-border .c-btn--btn {
+.l-footer__label .l-footer-btn .c-btn-border:hover {
+  background: #fff;
+  color: #ec643e;
+  transform: scale(1.1);
+}
+.l-footer__label .l-footer-btn .c-btn-border .c-btn-btn {
+  position: relative;
   margin: 0;
-  color: #fff;
   display: inline-block;
   font-size: 1.7rem;
   font-family: "游ゴシック", serif;
+  z-index: 20;
 }
 @media (min-width: 768px) {
-  .l-footer__label .l-footer-btn .c-btn-border .c-btn--btn {
+  .l-footer__label .l-footer-btn .c-btn-border .c-btn-btn {
     font-size: 2rem;
   }
 }
@@ -2369,7 +2399,7 @@ body {
 .l-footer__label .l-footer__sns {
   display: flex;
   justify-content: center;
-  gap: 3rem;
+  gap: 2rem;
 }
 .l-footer__label .l-footer__sns-item {
   display: flex;
@@ -2379,17 +2409,21 @@ body {
   height: 70px;
   border: solid 1px #fff;
   border-radius: 50px;
+  transition-duration: 500ms;
 }
 @media (min-width: 768px) {
   .l-footer__label .l-footer__sns-item {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80px;
-    height: 80px;
+    width: 78px;
+    height: 78px;
     border: solid 1px #fff;
     border-radius: 50px;
   }
+}
+.l-footer__label .l-footer__sns-item:hover {
+  transform: scale(1.1);
 }
 .l-footer__deco {
   position: absolute;
@@ -2466,10 +2500,15 @@ body {
   width: 100%;
   text-align: center;
   padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-bottom: 4rem;
+}
+@media screen and (min-width: 768px) {
+  .l-footer__copy {
+    padding-bottom: 5rem;
+  }
 }
 .l-footer__copy small {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #fff;
 }
 .l-footer__copy .l-footer-top {
@@ -2480,15 +2519,24 @@ body {
 }
 .l-footer__copy .l-footer-top .l-footer-top-btn {
   text-decoration: none;
+  margin: 0;
 }
 .l-footer__copy .l-footer-top .l-footer-top-btn-text {
-  padding: 1.2rem 0 1rem 0;
+  padding: 1rem 0 0.7rem 0;
   color: #fff;
   font-size: 1.6rem;
   font-weight: 400;
   font-family: "游明朝", sans-serif;
   display: flex;
   justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .l-footer__copy .l-footer-top .l-footer-top-btn-text {
+    padding: 1.2rem 0 1rem 0;
+  }
+}
+.l-footer__copy .l-footer-top .l-footer-top-btn-text:hover {
+  text-decoration: underline;
 }
 
 .u-text-center {
