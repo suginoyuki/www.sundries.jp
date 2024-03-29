@@ -1,3 +1,5 @@
+import { gsap } from 'gsap'
+
 // スクロールしたらヘッダーを表示
 window.addEventListener('scroll', function () {
   const elm = document.querySelector('.l-header')
