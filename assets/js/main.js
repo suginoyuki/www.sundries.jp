@@ -23,6 +23,5 @@ function includeHTML(url, targetId) {
   xhr.send()
 }
 
-includeHTML('inc/head.html', '#head')
 includeHTML('inc/header.html', '#header')
 includeHTML('inc/footer.html', '#footer')
