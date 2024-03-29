@@ -1,0 +1,98 @@
+@use '../../scss/variable' as *;
+
+.bippa-doted {
+  position: relative;
+  width: 20rem;
+  height: 16rem;
+  margin: 0 auto;
+  z-index: 0;
+
+  &::before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    box-shadow:
+      // 1
+      15rem 1rem $bippa-01, 16rem 1rem $bippa-01,
+      // 2
+      5rem 2rem $bippa-01,
+      6rem 2rem $bippa-01, 14rem 2rem $bippa-01, 15rem 2rem $bippa-02, 16rem 2rem $bippa-03, 17rem 2rem $bippa-01,
+      18rem 2rem $bippa-01,
+      // 3
+      4rem 3rem $bippa-01,
+      5rem 3rem $bippa-02, 6rem 3rem $bippa-02, 7rem 3rem $bippa-01, 8rem 3rem $bippa-01, 11rem 3rem $bippa-01,
+      12rem 3rem $bippa-01, 13rem 3rem $bippa-01, 14rem 3rem $bippa-01, 15rem 3rem $bippa-03, 16rem 3rem $bippa-04,
+      17rem 3rem $bippa-02, 18rem 3rem $bippa-03, 19rem 3rem $bippa-01,
+      // 4
+      4rem 4rem $bippa-01,
+      5rem 4rem $bippa-04, 6rem 4rem $bippa-03, 7rem 4rem $bippa-03, 8rem 4rem $bippa-03, 9rem 4rem $bippa-01,
+      10rem 4rem $bippa-01, 11rem 4rem $bippa-03, 12rem 4rem $bippa-03, 13rem 4rem $bippa-03, 14rem 4rem $bippa-03,
+      15rem 4rem $bippa-04, 16rem 4rem $bippa-04, 17rem 4rem $bippa-03, 18rem 4rem $bippa-04, 19rem 4rem $bippa-01,
+      // 5
+      3rem 5rem $bippa-01,
+      4rem 5rem $bippa-03, 5rem 5rem $bippa-03, 6rem 5rem $bippa-03, 7rem 5rem $bippa-03, 8rem 5rem $bippa-03,
+      9rem 5rem $bippa-03, 10rem 5rem $bippa-03, 11rem 5rem $bippa-04, 12rem 5rem $bippa-04, 13rem 5rem $bippa-03,
+      14rem 5rem $bippa-03, 15rem 5rem $bippa-03, 16rem 5rem $bippa-03, 17rem 5rem $bippa-04, 18rem 5rem $bippa-02,
+      19rem 5rem $bippa-03, 20rem 5rem $bippa-01,
+      // 6
+      2rem 6rem $bippa-01,
+      3rem 6rem $bippa-01, 4rem 6rem $bippa-03, 5rem 6rem $bippa-05, 6rem 6rem $bippa-05, 7rem 6rem $bippa-03,
+      8rem 6rem $bippa-03, 9rem 6rem $bippa-03, 10rem 6rem $bippa-02, 11rem 6rem $bippa-03, 12rem 6rem $bippa-03,
+      13rem 6rem $bippa-04, 14rem 6rem $bippa-03, 15rem 6rem $bippa-03, 16rem 6rem $bippa-03, 17rem 6rem $bippa-04,
+      18rem 6rem $bippa-03, 19rem 6rem $bippa-03, 1rem 6rem $bippa-01,
+      // 7
+      2rem 7rem $bippa-01,
+      3rem 7rem $bippa-05, 4rem 7rem $bippa-05, 5rem 7rem $bippa-05, 6rem 7rem $bippa-05, 7rem 7rem $bippa-03,
+      8rem 7rem $bippa-05, 9rem 7rem $bippa-03, 10rem 7rem $bippa-03, 11rem 7rem $bippa-03, 12rem 7rem $bippa-03,
+      13rem 7rem $bippa-04, 14rem 7rem $bippa-03, 15rem 7rem $bippa-03, 16rem 7rem $bippa-03, 17rem 7rem $bippa-03,
+      18rem 7rem $bippa-02, 19rem 7rem $bippa-01,
+      // 8
+      1rem 8rem $bippa-01,
+      2rem 8rem $bippa-03, 3rem 8rem $bippa-03, 4rem 8rem $bippa-03, 5rem 8rem $bippa-05, 6rem 8rem $bippa-05,
+      7rem 8rem $bippa-05, 8rem 8rem $bippa-07, 9rem 8rem $bippa-05, 10rem 8rem $bippa-03, 11rem 8rem $bippa-03,
+      12rem 8rem $bippa-04, 13rem 8rem $bippa-03, 14rem 8rem $bippa-03, 15rem 8rem $bippa-03, 16rem 8rem $bippa-03,
+      17rem 8rem $bippa-03, 18rem 8rem $bippa-04, 19rem 8rem $bippa-01,
+      // 9
+      1rem 9rem $bippa-01,
+      2rem 9rem $bippa-06, 3rem 9rem $bippa-09, 4rem 9rem $bippa-06, 5rem 9rem $bippa-06, 6rem 9rem $bippa-03,
+      7rem 9rem $bippa-05, 8rem 9rem $bippa-01, 9rem 9rem $bippa-05, 10rem 9rem $bippa-03, 11rem 9rem $bippa-03,
+      12rem 9rem $bippa-03, 13rem 9rem $bippa-03, 14rem 9rem $bippa-03, 15rem 9rem $bippa-03, 16rem 9rem $bippa-03,
+      17rem 9rem $bippa-04, 18rem 9rem $bippa-01,
+      // 10
+      1rem 10rem $bippa-01,
+      2rem 10rem $bippa-06, 3rem 10rem $bippa-06, 4rem 10rem $bippa-06, 5rem 10rem $bippa-06, 6rem 10rem $bippa-06,
+      7rem 10rem $bippa-06, 8rem 10rem $bippa-05, 9rem 10rem $bippa-03, 10rem 10rem $bippa-03, 11rem 10rem $bippa-03,
+      12rem 10rem $bippa-04, 13rem 10rem $bippa-03, 14rem 10rem $bippa-03, 15rem 10rem $bippa-03, 16rem 10rem $bippa-03,
+      17rem 10rem $bippa-04, 18rem 10rem $bippa-01,
+      // 11
+      2rem 11rem $bippa-01,
+      3rem 11rem $bippa-04, 4rem 11rem $bippa-06, 5rem 11rem $bippa-06, 6rem 11rem $bippa-06, 7rem 11rem $bippa-06,
+      8rem 11rem $bippa-03, 9rem 11rem $bippa-03, 10rem 11rem $bippa-03, 11rem 11rem $bippa-03, 12rem 11rem $bippa-03,
+      13rem 11rem $bippa-04, 14rem 11rem $bippa-03, 15rem 11rem $bippa-03, 16rem 11rem $bippa-04, 17rem 11rem $bippa-02,
+      18rem 11rem $bippa-01,
+      // 12
+      2rem 12rem $bippa-01,
+      3rem 12rem $bippa-07, 4rem 12rem $bippa-04, 5rem 12rem $bippa-06, 6rem 12rem $bippa-06, 7rem 12rem $bippa-04,
+      8rem 12rem $bippa-02, 9rem 12rem $bippa-03, 10rem 12rem $bippa-04, 11rem 12rem $bippa-03, 12rem 12rem $bippa-02,
+      13rem 12rem $bippa-04, 14rem 12rem $bippa-02, 15rem 12rem $bippa-04, 16rem 12rem $bippa-01, 17rem 12rem $bippa-01,
+      // 13
+      2rem 13rem $bippa-01,
+      3rem 13rem $bippa-08, 4rem 13rem $bippa-07, 5rem 13rem $bippa-04, 6rem 13rem $bippa-04, 7rem 13rem $bippa-02,
+      8rem 13rem $bippa-02, 9rem 13rem $bippa-02, 10rem 13rem $bippa-02, 11rem 13rem $bippa-04, 12rem 13rem $bippa-04,
+      13rem 13rem $bippa-02, 14rem 13rem $bippa-02, 15rem 13rem $bippa-01, 16rem 13rem $bippa-01,
+      // 14
+      3rem 14rem $bippa-01,
+      4rem 14rem $bippa-08, 5rem 14rem $bippa-01, 6rem 14rem $bippa-02, 7rem 14rem $bippa-02, 8rem 14rem $bippa-01,
+      9rem 14rem $bippa-02, 10rem 14rem $bippa-02, 11rem 14rem $bippa-01, 12rem 14rem $bippa-02, 13rem 14rem $bippa-02,
+      14rem 14rem $bippa-01,
+      // 15
+      4rem 15rem $bippa-01,
+      6rem 15rem $bippa-01, 7rem 15rem $bippa-01, 9rem 15rem $bippa-01, 10rem 15rem $bippa-01, 11rem 15rem $bippa-01,
+      12rem 15rem $bippa-01, 13rem 15rem $bippa-01, 14rem 15rem $bippa-01,
+      // 16
+      12rem 16rem $bippa-01,
+      13rem 16rem $bippa-01;
+  }
+}
