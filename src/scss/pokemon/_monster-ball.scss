@@ -1,0 +1,123 @@
+@use '../../scss/variable' as *;
+
+.monster-ball {
+  position: relative;
+  width: 15rem;
+  height: 16rem;
+  margin: 5rem auto;
+  z-index: 0;
+  // animation: shake 3s ease-in infinite;
+
+  @keyframes shake {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    20% {
+      transform: rotate(5deg);
+    }
+
+    40% {
+      transform: rotate(-5deg);
+    }
+
+    60% {
+      transform: rotate(5deg);
+    }
+
+    80% {
+      transform: rotate(-5deg);
+    }
+
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    box-shadow:
+      // 1
+      6rem 1rem $monster-ball-01, 7rem 1rem $monster-ball-01, 8rem 1rem $monster-ball-01, 9rem 1rem $monster-ball-01,
+      10rem 1rem $monster-ball-01,
+      // 2
+      4rem 2rem $monster-ball-01,
+      5rem 2rem $monster-ball-01, 6rem 2rem $monster-ball-03, 7rem 2rem $monster-ball-03, 8rem 2rem $monster-ball-03,
+      9rem 2rem $monster-ball-03, 10rem 2rem $monster-ball-03, 11rem 2rem $monster-ball-01, 12rem 2rem $monster-ball-01,
+      // 3
+      3rem 3rem $monster-ball-01,
+      4rem 3rem $monster-ball-03, 5rem 3rem $monster-ball-03, 6rem 3rem $monster-ball-03, 7rem 3rem $monster-ball-03,
+      8rem 3rem $monster-ball-03, 9rem 3rem $monster-ball-03, 10rem 3rem $monster-ball-03, 11rem 3rem $monster-ball-03,
+      12rem 3rem $monster-ball-03, 13rem 3rem $monster-ball-01,
+      // 4
+      2rem 4rem $monster-ball-01,
+      3rem 4rem $monster-ball-03, 4rem 4rem $monster-ball-03, 5rem 4rem $monster-ball-03, 6rem 4rem $monster-ball-03,
+      7rem 4rem $monster-ball-03, 8rem 4rem $monster-ball-03, 9rem 4rem $monster-ball-03, 10rem 4rem $monster-ball-03,
+      11rem 4rem $monster-ball-03, 12rem 4rem $monster-ball-03, 13rem 4rem $monster-ball-03, 14rem 4rem $monster-ball-01,
+      // 5
+      2rem 5rem $monster-ball-01,
+      3rem 5rem $monster-ball-03, 4rem 5rem $monster-ball-03, 5rem 5rem $monster-ball-03, 6rem 5rem $monster-ball-03,
+      7rem 5rem $monster-ball-03, 8rem 5rem $monster-ball-03, 9rem 5rem $monster-ball-03, 10rem 5rem $monster-ball-03,
+      11rem 5rem $monster-ball-03, 12rem 5rem $monster-ball-03, 13rem 5rem $monster-ball-03, 14rem 5rem $monster-ball-01,
+      // 6
+      1rem 6rem $monster-ball-01,
+      2rem 6rem $monster-ball-03, 3rem 6rem $monster-ball-03, 4rem 6rem $monster-ball-03, 5rem 6rem $monster-ball-03,
+      6rem 6rem $monster-ball-03, 7rem 6rem $monster-ball-01, 8rem 6rem $monster-ball-01, 9rem 6rem $monster-ball-01,
+      10rem 6rem $monster-ball-03, 11rem 6rem $monster-ball-03, 12rem 6rem $monster-ball-03, 13rem 6rem $monster-ball-03,
+      14rem 6rem $monster-ball-03, 15rem 6rem $monster-ball-01,
+      // 7
+      1rem 7rem $monster-ball-01,
+      2rem 7rem $monster-ball-03, 3rem 7rem $monster-ball-03, 4rem 7rem $monster-ball-03, 5rem 7rem $monster-ball-03,
+      6rem 7rem $monster-ball-01, 7rem 7rem $monster-ball-02, 8rem 7rem $monster-ball-02, 9rem 7rem $monster-ball-02,
+      10rem 7rem $monster-ball-01, 11rem 7rem $monster-ball-03, 12rem 7rem $monster-ball-03, 13rem 7rem $monster-ball-03,
+      14rem 7rem $monster-ball-03, 15rem 7rem $monster-ball-01,
+      // 8
+      1rem 8rem $monster-ball-01,
+      2rem 8rem $monster-ball-01, 3rem 8rem $monster-ball-01, 4rem 8rem $monster-ball-01, 5rem 8rem $monster-ball-01,
+      6rem 8rem $monster-ball-01, 7rem 8rem $monster-ball-02, 8rem 8rem $monster-ball-02, 9rem 8rem $monster-ball-02,
+      10rem 8rem $monster-ball-01, 11rem 8rem $monster-ball-01, 12rem 8rem $monster-ball-01, 13rem 8rem $monster-ball-01,
+      14rem 8rem $monster-ball-01, 15rem 8rem $monster-ball-01,
+      // 9
+      1rem 9rem $monster-ball-01,
+      2rem 9rem $monster-ball-02, 3rem 9rem $monster-ball-02, 4rem 9rem $monster-ball-02, 5rem 9rem $monster-ball-02,
+      6rem 9rem $monster-ball-01, 7rem 9rem $monster-ball-02, 8rem 9rem $monster-ball-02, 9rem 9rem $monster-ball-02,
+      10rem 9rem $monster-ball-01, 11rem 9rem $monster-ball-02, 12rem 9rem $monster-ball-02, 13rem 9rem $monster-ball-02,
+      14rem 9rem $monster-ball-02, 15rem 9rem $monster-ball-01,
+      // 10
+      1rem 10rem $monster-ball-01,
+      2rem 10rem $monster-ball-02, 3rem 10rem $monster-ball-02, 4rem 10rem $monster-ball-02, 5rem 10rem $monster-ball-02,
+      6rem 10rem $monster-ball-02, 7rem 10rem $monster-ball-01, 8rem 10rem $monster-ball-01, 9rem 10rem $monster-ball-01,
+      10rem 10rem $monster-ball-02, 11rem 10rem $monster-ball-02, 12rem 10rem $monster-ball-02,
+      13rem 10rem $monster-ball-02, 14rem 10rem $monster-ball-02, 15rem 10rem $monster-ball-01,
+      // 11
+      2rem 11rem $monster-ball-01,
+      3rem 11rem $monster-ball-02, 4rem 11rem $monster-ball-02, 5rem 11rem $monster-ball-02, 6rem 11rem $monster-ball-02,
+      7rem 11rem $monster-ball-02, 8rem 11rem $monster-ball-02, 9rem 11rem $monster-ball-02,
+      10rem 11rem $monster-ball-02, 11rem 11rem $monster-ball-02, 12rem 11rem $monster-ball-02,
+      13rem 11rem $monster-ball-02, 14rem 11rem $monster-ball-01,
+      // 12
+      2rem 12rem $monster-ball-01,
+      3rem 12rem $monster-ball-02, 4rem 12rem $monster-ball-02, 5rem 12rem $monster-ball-02, 6rem 12rem $monster-ball-02,
+      7rem 12rem $monster-ball-02, 8rem 12rem $monster-ball-02, 9rem 12rem $monster-ball-02,
+      10rem 12rem $monster-ball-02, 11rem 12rem $monster-ball-02, 12rem 12rem $monster-ball-02,
+      13rem 12rem $monster-ball-02, 14rem 12rem $monster-ball-01,
+      // 13
+      3rem 13rem $monster-ball-01,
+      4rem 13rem $monster-ball-02, 5rem 13rem $monster-ball-02, 6rem 13rem $monster-ball-02, 7rem 13rem $monster-ball-02,
+      8rem 13rem $monster-ball-02, 9rem 13rem $monster-ball-02, 10rem 13rem $monster-ball-02,
+      11rem 13rem $monster-ball-02, 12rem 13rem $monster-ball-02, 13rem 13rem $monster-ball-01,
+      // 14
+      4rem 14rem $monster-ball-01,
+      5rem 14rem $monster-ball-01, 6rem 14rem $monster-ball-02, 7rem 14rem $monster-ball-02, 8rem 14rem $monster-ball-02,
+      9rem 14rem $monster-ball-02, 10rem 14rem $monster-ball-02, 11rem 14rem $monster-ball-01,
+      12rem 14rem $monster-ball-01,
+      // 15
+      5rem 15rem $monster-ball-01,
+      6rem 15rem $monster-ball-01, 7rem 15rem $monster-ball-01, 8rem 15rem $monster-ball-01, 9rem 15rem $monster-ball-01,
+      10rem 15rem $monster-ball-01;
+  }
+}
