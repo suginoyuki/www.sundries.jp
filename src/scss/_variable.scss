@@ -3,10 +3,11 @@
 */
 $color-theme: #22af6a;
 $color-theme-accent: #fffaad;
-$color-gray-0: #fff;
+$color-gray-0: #ffffff;
+$color-gray-100: #000000;
 $color-gray-EEEEEE: #eeeeee;
 $color-gray-555555: #555555;
-$color-text: #333;
+$color-text: #333333;
 
 // brown
 $color-brown: #d4c4a3;
@@ -69,6 +70,12 @@ $monster-ball-03: #c0282f;
 $font-heading: 'Crimson Text', serif;
 $font-serif: 'Noto Serif JP', serif;
 $font-body: 'Noto Sans JP', sans-serif;
+$font-game: 'game', sans-serif;
+
+@font-face {
+  font-family: 'game';
+  src: url('../../assets/font/k8x12.ttf') format('truetype');
+}
 /* */
 
 /*

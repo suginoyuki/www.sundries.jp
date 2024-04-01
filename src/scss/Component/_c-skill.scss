@@ -1,0 +1,73 @@
+@use '../../scss/variable' as *;
+
+.c-skill {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50rem;
+  padding: 2rem 3rem;
+  border-radius: 1.5rem;
+  border: 2px dashed $color-gray-100;
+
+  // .c-skill__item
+  &__item {
+    width: calc(100% / 2);
+  }
+
+  // .c-skill__link
+  &__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+    font-family: $font-game;
+    text-decoration: none;
+    z-index: 0;
+
+    @media (any-hover: hover) {
+      &:hover,
+      &:focus-visible {
+        text-decoration: none;
+
+        &::before {
+          opacity: 1;
+          animation: rotate 0.5s linear;
+        }
+      }
+    }
+
+    &::before {
+      content: '→';
+      display: flex;
+      flex: 0 0 auto;
+      margin-right: 1rem;
+      opacity: 0;
+      transition: opacity 0.2s ease-in-out;
+
+      @keyframes rotate {
+        0% {
+          transform: rotateX(0);
+        }
+
+        20% {
+          transform: rotateX(90deg);
+        }
+
+        40% {
+          transform: rotateX(180deg);
+        }
+
+        60% {
+          transform: rotateX(270deg);
+        }
+
+        80% {
+          transform: rotateX(360deg);
+        }
+
+        100% {
+          transform: rotateX(360deg);
+        }
+      }
+    }
+  }
+}

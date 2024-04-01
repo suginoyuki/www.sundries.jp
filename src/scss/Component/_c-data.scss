@@ -1,0 +1,46 @@
+@use '../../scss/variable' as *;
+
+.c-data {
+  display: flex;
+  align-items: center;
+  font-family: $font-game;
+
+  // .c-data__name
+  &__name {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    font-size: 2.4rem;
+    margin-right: 1.5rem;
+  }
+
+  // .c-data__hp
+  &__hp {
+    display: flex;
+    align-items: center;
+
+    // .c-data__hp-label
+    &-label {
+      display: flex;
+      flex: 0 0 auto;
+      margin-right: 1rem;
+      font-size: 2rem;
+    }
+
+    // .c-data__hp-gauge
+    &-gauge {
+      width: 20rem;
+      height: 1rem;
+      margin: 10px 0;
+      background: #999;
+      border-radius: 50rem;
+      border: 1px solid #333;
+
+      & > div {
+        height: 100%;
+        border-radius: 50rem;
+        background: #78d461;
+      }
+    }
+  }
+}
