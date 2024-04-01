@@ -22,7 +22,6 @@
 @use '../../src/scss/Component/c-pickup' as *;
 @use '../../src/scss/Component/c-card' as *;
 @use '../../src/scss/Component/c-price' as *;
-@use '../../src/scss/Component/c-bippa' as *;
 
 // Layout
 @use '../../src/scss/Layout/l-header' as *;
@@ -32,3 +31,7 @@
 @use '../../src/scss/Utility/u-text' as *;
 @use '../../src/scss/Utility/u-flex' as *;
 @use '../../src/scss/Utility/u-overflow' as *;
+
+// pokemon
+@use '../../src/scss/pokemon/bippa' as *;
+@use '../../src/scss/pokemon/Kodak' as *;

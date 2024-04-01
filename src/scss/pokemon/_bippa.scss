@@ -1,11 +1,38 @@
 @use '../../scss/variable' as *;
 
-.bippa-doted {
+.bippa {
   position: relative;
   width: 20rem;
   height: 16rem;
-  margin: 0 auto;
+  margin: 5rem auto;
   z-index: 0;
+  // animation: shake 3s ease-in infinite;
+
+  @keyframes shake {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    20% {
+      transform: rotate(5deg);
+    }
+
+    40% {
+      transform: rotate(-5deg);
+    }
+
+    60% {
+      transform: rotate(5deg);
+    }
+
+    80% {
+      transform: rotate(-5deg);
+    }
+
+    100% {
+      transform: rotate(0deg);
+    }
+  }
 
   &::before {
     position: absolute;
@@ -41,7 +68,7 @@
       3rem 6rem $bippa-01, 4rem 6rem $bippa-03, 5rem 6rem $bippa-05, 6rem 6rem $bippa-05, 7rem 6rem $bippa-03,
       8rem 6rem $bippa-03, 9rem 6rem $bippa-03, 10rem 6rem $bippa-02, 11rem 6rem $bippa-03, 12rem 6rem $bippa-03,
       13rem 6rem $bippa-04, 14rem 6rem $bippa-03, 15rem 6rem $bippa-03, 16rem 6rem $bippa-03, 17rem 6rem $bippa-04,
-      18rem 6rem $bippa-03, 19rem 6rem $bippa-03, 1rem 6rem $bippa-01,
+      18rem 6rem $bippa-03, 19rem 6rem $bippa-03, 20rem 6rem $bippa-01,
       // 7
       2rem 7rem $bippa-01,
       3rem 7rem $bippa-05, 4rem 7rem $bippa-05, 5rem 7rem $bippa-05, 6rem 7rem $bippa-05, 7rem 7rem $bippa-03,
