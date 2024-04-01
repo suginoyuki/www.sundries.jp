@@ -31,13 +31,21 @@
 
     .c-scene__deco--01 {
       img {
-        width: min(69rem, calc(690 / 1500 * 100vw));
+        width: min(25rem, calc(250 / 375 * 100vw));
+
+        @include over(min-md) {
+          width: min(69rem, calc(690 / 1500 * 100vw));
+        }
       }
     }
 
     .c-scene__content-deco--orange01 {
       img {
-        width: min(26.7rem, calc(267 / 1500 * 100vw));
+        width: min(12rem, calc(120 / 375 * 100vw));
+
+        @include over(min-md) {
+          width: min(26.7rem, calc(267 / 1500 * 100vw));
+        }
       }
     }
 
@@ -45,9 +53,23 @@
       display: flex;
       flex: 0 0 auto;
       width: min(41.5rem, calc(415 / 1500 * 100vw));
+      margin-top: -3rem;
 
-      @include over(min-md) {
+      @include over(min-lg) {
         margin-top: -14rem;
+      }
+    }
+
+    .c-scene__deco--04 {
+      top: 3rem;
+      left: max(25rem, calc(250 / 1500 * 100vw));
+
+      img {
+        width: min(34.7rem, calc(250 / 768 * 100vw));
+
+        @include over(min-lg) {
+          width: min(34.7rem, calc(347 / 1500 * 100vw));
+        }
       }
     }
   }

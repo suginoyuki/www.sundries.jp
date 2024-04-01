@@ -1090,19 +1090,42 @@ body {
   background: #ec643e;
 }
 .c-scene--orange .c-scene__deco--01 img {
-  width: min(69rem, 46vw);
+  width: min(25rem, 66.6666666667vw);
+}
+@media screen and (min-width: 768px) {
+  .c-scene--orange .c-scene__deco--01 img {
+    width: min(69rem, 46vw);
+  }
 }
 .c-scene--orange .c-scene__content-deco--orange01 img {
-  width: min(26.7rem, 17.8vw);
+  width: min(12rem, 32vw);
+}
+@media screen and (min-width: 768px) {
+  .c-scene--orange .c-scene__content-deco--orange01 img {
+    width: min(26.7rem, 17.8vw);
+  }
 }
 .c-scene--orange .c-scene__content-textarea-img {
   display: flex;
   flex: 0 0 auto;
   width: min(41.5rem, 27.6666666667vw);
+  margin-top: -3rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .c-scene--orange .c-scene__content-textarea-img {
     margin-top: -14rem;
+  }
+}
+.c-scene--orange .c-scene__deco--04 {
+  top: 3rem;
+  left: max(25rem, 16.6666666667vw);
+}
+.c-scene--orange .c-scene__deco--04 img {
+  width: min(34.7rem, 32.5520833333vw);
+}
+@media screen and (min-width: 1024px) {
+  .c-scene--orange .c-scene__deco--04 img {
+    width: min(34.7rem, 23.1333333333vw);
   }
 }
 .c-scene__loop {

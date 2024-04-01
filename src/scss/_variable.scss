@@ -72,6 +72,8 @@ $font-body: 'Noto Sans JP', sans-serif;
 $breakpoints: (
   'min-md': 'screen and (min-width: 768px)',
   'min-lg': 'screen and (min-width: 1024px)',
+  'max-md': 'screen and (max-width: 768px)',
+  'max-lg': 'screen and (max-width: 1024px)',
 ) !default;
 
 // @mixinの定義
