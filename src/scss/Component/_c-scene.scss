@@ -28,6 +28,28 @@
         background: $color-orange;
       }
     }
+
+    .c-scene__deco--01 {
+      img {
+        width: min(69rem, calc(690 / 1500 * 100vw));
+      }
+    }
+
+    .c-scene__content-deco--orange01 {
+      img {
+        width: min(26.7rem, calc(267 / 1500 * 100vw));
+      }
+    }
+
+    .c-scene__content-textarea-img {
+      display: flex;
+      flex: 0 0 auto;
+      width: min(41.5rem, calc(415 / 1500 * 100vw));
+
+      @include over(min-md) {
+        margin-top: -14rem;
+      }
+    }
   }
 
   // .c-scene__loop
