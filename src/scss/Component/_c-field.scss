@@ -1,0 +1,10 @@
+@use '../../scss/variable' as *;
+
+.c-field {
+  width: 60rem;
+  aspect-ratio: 2 / 1;
+  border-radius: 50%;
+  background: $color-green-64B950;
+  border: 20px solid $color-yellow-EDCE7A;
+  // filter: blur(5px);
+}

@@ -2438,7 +2438,7 @@ body {
 }
 
 .c-data {
-  width: 40rem;
+  width: 30rem;
   padding: 1rem 2rem 0.5rem;
   font-family: "game", sans-serif;
   border-radius: 1rem;
@@ -2480,6 +2480,7 @@ body {
 .c-data__hp {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 }
 .c-data__hp-label {
   display: flex;
@@ -2522,6 +2523,14 @@ body {
   font-family: "game", sans-serif;
   color: #ffffff;
   word-break: break-all;
+}
+
+.c-field {
+  width: 60rem;
+  aspect-ratio: 2/1;
+  border-radius: 50%;
+  background: #64b950;
+  border: 20px solid #edce7a;
 }
 
 .l-header {
