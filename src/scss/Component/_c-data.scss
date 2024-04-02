@@ -1,17 +1,51 @@
 @use '../../scss/variable' as *;
 
 .c-data {
-  display: flex;
-  align-items: center;
+  width: 40rem;
+  padding: 1rem 2rem 0.5rem;
   font-family: $font-game;
+  border-radius: 1rem;
+  border: 2px solid $color-text;
+  background: $color-yellow-fcf6c4;
+
+  // .c-data__title
+  &__title {
+    display: flex;
+    align-items: center;
+  }
 
   // .c-data__name
   &__name {
+    position: relative;
     display: flex;
     align-items: center;
     flex: 0 0 auto;
     font-size: 2.4rem;
+    line-height: 1.5;
     margin-right: 1.5rem;
+    z-index: 0;
+
+    &::after {
+      content: attr(data-gender);
+      display: block;
+      font-size: 1.4rem;
+      margin-left: 1rem;
+    }
+  }
+
+  // .c-data__level
+  &__level {
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    font-size: 1.6rem;
+    z-index: 0;
+
+    &::after {
+      content: attr(data-level);
+      display: block;
+      font-size: 2rem;
+    }
   }
 
   // .c-data__hp
@@ -29,17 +63,25 @@
 
     // .c-data__hp-gauge
     &-gauge {
+      position: relative;
       width: 20rem;
-      height: 1rem;
+      height: 1.5rem;
       margin: 10px 0;
       background: #999;
       border-radius: 50rem;
       border: 1px solid #333;
+      box-shadow: 0 0 0 1px #fff inset;
+      z-index: 0;
 
       & > div {
-        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 1px;
+        width: calc(100% - 2px);
+        height: calc(100% - 2px);
         border-radius: 50rem;
         background: #78d461;
+        transform: translateY(-50%);
       }
     }
   }

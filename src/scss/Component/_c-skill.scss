@@ -3,14 +3,17 @@
 .c-skill {
   display: flex;
   flex-wrap: wrap;
-  width: 50rem;
-  padding: 2rem 3rem;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 40rem;
+  padding: 1rem 3rem;
   border-radius: 1.5rem;
-  border: 2px dashed $color-gray-100;
+  border: 4px solid $color-gray-0;
+  background: $color-green-29585C;
 
   // .c-skill__item
   &__item {
-    width: calc(100% / 2);
+    width: calc(100% / 2.1);
   }
 
   // .c-skill__link
@@ -18,8 +21,9 @@
     position: relative;
     display: flex;
     align-items: center;
-    font-size: 3rem;
+    font-size: 2rem;
     font-family: $font-game;
+    color: $color-gray-0;
     text-decoration: none;
     z-index: 0;
 

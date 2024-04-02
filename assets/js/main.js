@@ -25,3 +25,31 @@ function includeHTML(url, targetId) {
 
 includeHTML('inc/header.html', '#header')
 includeHTML('inc/footer.html', '#footer')
+
+window.addEventListener('load', function () {
+  // テキストごとにspanタグを生成する
+  var elements = document.querySelectorAll('.js-typing')
+  elements.forEach(function (element) {
+    var text = element.innerHTML
+    var newText = ''
+    text.split('').forEach(function (char) {
+      if (char !== ' ') {
+        newText += '<span style="display:none;">' + char + '</span>'
+      } else {
+        newText += ' '
+      }
+    })
+    element.innerHTML = newText
+  })
+
+  // タイピングアニメーション
+  elements.forEach(function (element) {
+    var children = element.children
+    Array.from(children).forEach(function (child, i) {
+      var time = 150
+      setTimeout(function () {
+        child.style.display = 'inline'
+      }, time * i)
+    })
+  })
+})

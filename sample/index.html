@@ -14,13 +14,18 @@
     rel="stylesheet">
   <!-- -->
   <link rel="stylesheet" href="../assets/css/main.css">
+  <script src="../assets/js/main.js"></script>
   <title>サンプルページ</title>
 </head>
 
-<body class="bg-theme u-pb-100">
+<body class="bg-theme u-pb-100 p-20">
   <main class="">
-    <div class="c-data">
-      <h2 class="c-data__name">ビッパ</h2>
+    <div class="c-data my-50">
+      <div class="c-data__title">
+        <h2 class="c-data__name" data-gender="♂">ビッパ</h2>
+        <span class="c-data__level" data-level="12">Lv.</span>
+      </div>
+
       <div class="c-data__hp">
         <span class="c-data__hp-label">HP</span>
         <div class="c-data__hp-gauge">
@@ -29,7 +34,12 @@
       </div>
     </div>
 
-    <ul class="c-skill">
+    <div class="c-description my-50">
+      <p class="c-description__label js-typing">あ！やせいの</p>
+      <p class="c-description__label js-typing">ビッパが飛び出してきた！</p>
+    </div>
+
+    <ul class="c-skill my-50">
       <li class="c-skill__item">
         <a href="#" class="c-skill__link">なきごえ</a>
       </li>
