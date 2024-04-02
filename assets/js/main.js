@@ -7,7 +7,7 @@ window.addEventListener('scroll', function () {
   } else {
     elm.style.opacity = '0'
   }
-})
+});
 
 // インクルード
 function includeHTML(url, targetId) {
@@ -68,4 +68,4 @@ document.addEventListener('DOMContentLoaded', function () {
     // 親要素に新しいクラス名を追加します
     parentElement.classList.add(classNameToAdd)
   })
-})
+});
