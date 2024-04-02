@@ -80,9 +80,11 @@
 
   .c-list-card__link--orange {
     .c-list-card__img {
+      top: 1rem;
       width: calc(293 / 375 * 100vw);
 
       @include over(min-md) {
+        top: 2rem;
         width: 29.3rem;
       }
     }
