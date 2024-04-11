@@ -3,11 +3,12 @@ window.addEventListener('scroll', function () {
   const elm = document.querySelector('.l-header')
   const scroll = window.pageYOffset
   if (scroll > 700) {
-    elm.style.opacity = '1';
+    elm.style.opacity = '1'
   } else {
-    elm.style.opacity = '0';
+    elm.style.opacity = '0'
   }
-});
+})
+
 
 // インクルード
 function includeHTML(url, targetId) {
@@ -58,13 +59,14 @@ window.addEventListener('load', function () {
 // バナー
 document.addEventListener('DOMContentLoaded', function () {
   var btn = document.querySelector('.c-fixed-bnr__btn')
-  if (btn) {
-    btn.addEventListener('click', function () {
-      var classNameToAdd = 'is-none'
-      var parentElement = btn.parentElement
-      parentElement.classList.add(classNameToAdd)
-    })
-  } else {
-    console.error('Button element not found.')
-  }
+  btn.addEventListener('click', function () {
+    // クリックされたときに親要素に付与するクラス名を指定
+    var classNameToAdd = 'is-none'
+
+    // ボタンの親要素を取得
+    var parentElement = btn.parentNode
+
+    // 親要素に新しいクラス名を追加します
+    parentElement.classList.add(classNameToAdd)
+  })
 });

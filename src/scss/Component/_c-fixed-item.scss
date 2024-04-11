@@ -32,7 +32,7 @@
     display: none;
   }
 
-  // .c-fixed-item-bnr__btn
+  // .c-fixed-bnr__btn
   &__btn {
     position: absolute;
     z-index: 1;
@@ -57,6 +57,7 @@
       width: calc(100% - 15px);
       height: 1.5px;
       background-color: $color-gray-0;
+      pointer-events: none;
     }
 
     &:before {
