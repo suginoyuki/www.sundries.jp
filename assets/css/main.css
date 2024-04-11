@@ -1488,6 +1488,34 @@ body {
   }
 }
 
+.fd-up {
+  opacity: 0;
+  transform: translateY(90px);
+  transition: 0.55s ease;
+}
+
+.fd-up-txtloop {
+  opacity: 0;
+  transform: translateY(120px);
+  transition: 1.3s ease;
+}
+
+.fd-time1 {
+  transition-delay: 0.4s;
+}
+
+.fd-time2 {
+  transition-delay: 0.6s;
+}
+
+.fd-time3 {
+  transition-delay: 0.8s;
+}
+
+.fd-time4 {
+  transition-delay: 1s;
+}
+
 .c-product {
   background: #f8a32f;
   position: relative;
@@ -1557,22 +1585,31 @@ body {
   align-items: stretch;
   flex: 0 0 auto;
   flex-wrap: wrap;
-  justify-content: center;
   padding: 0;
 }
 .c-product__link {
   padding: 20px 20px 20px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100%;
+  color: #ffffff;
+  animation-duration: 0.2s;
+}
+.c-product__link:hover {
+  color: #faf164;
 }
 @media screen and (min-width: 1024px) {
   .c-product__link {
-    padding: 20px 40px 40px;
+    gap: 2rem;
+    padding: 50px 40px 60px;
   }
 }
 .c-product__item {
   position: relative;
   display: flex;
   flex-direction: column;
-  flex: 1 1 auto;
   list-style: none;
   border-right: solid 2px #fff;
   border-bottom: solid 2px #fff;
@@ -1591,12 +1628,23 @@ body {
   justify-content: center;
   margin: auto;
 }
+@keyframes opacity {
+  0% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.c-product__item__img:hover {
+  animation: 1s opacity forwards;
+}
 .c-product__item-deco {
   position: absolute;
   pointer-events: none;
 }
 .c-product__item--01 {
-  width: 50%;
+  width: 40%;
 }
 @media (max-width: 1024px) {
   .c-product__item--01 {
@@ -1605,7 +1653,7 @@ body {
 }
 .c-product__item--01 .c-product-item-deco-top {
   width: 7%;
-  top: 5%;
+  top: 10%;
   right: 29%;
 }
 .c-product__item--01 .c-product-item-deco-bottom {
@@ -1663,7 +1711,7 @@ body {
   transform: rotate(-63deg);
 }
 .c-product__item--06 {
-  width: 60%;
+  width: 53%;
 }
 .c-product__item--06 .c-product-item-deco {
   width: 20%;
@@ -1703,37 +1751,37 @@ body {
     right: 20%;
   }
 }
-.c-product__item .c-product__link {
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  height: 100%;
+.c-product__item--09 {
+  width: 70%;
+  padding-left: 10%;
 }
-@media screen and (min-width: 1024px) {
-  .c-product__item .c-product__link {
-    gap: 2rem;
-  }
+.c-product__item--10 {
+  width: 80%;
+}
+.c-product__item--11 {
+  width: 60%;
+}
+.c-product__item--12 {
+  width: 62%;
+}
+.c-product__item--13 {
+  width: 48%;
+}
+.c-product__item--14 {
+  width: 89%;
 }
 .c-product__content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-}
-@media screen and (min-width: 768px) {
-  .c-product__content {
-    gap: 20px;
-  }
+  overflow: hidden;
 }
 .c-product__content .c-product-col {
   text-align: center;
-  color: #ffffff;
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 500;
   line-height: 2.6;
-  overflow-wrap: break-all;
 }
 @media screen and (min-width: 768px) {
   .c-product__content .c-product-col {
@@ -1753,6 +1801,15 @@ body {
   font-weight: 500;
   font-size: clamp(0.938rem, -0.166rem + 0.76vw, 1.5rem);
   letter-spacing: 1.8px;
+}
+.c-product__content .c-price {
+  width: 100%;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.6rem;
+}
+.c-product__content .c-price .zeikomi {
+  font-size: 1.2rem;
+  padding-left: 1.5%;
 }
 
 .c-container {
