@@ -70,34 +70,3 @@ document.addEventListener('DOMContentLoaded', function () {
     parentElement.classList.add(classNameToAdd)
   })
 });
-
-
-// フェードアップ
-// window.addEventListener('load', function () {
-//   var fdUpElements = document.querySelectorAll('.fd-up')
-//   var fdUpTxtloopElements = document.querySelectorAll('.fd-up-txtloop')
-
-//   function handleScroll() {
-//     var scrollPosition = window.pageYOffset
-//     var windowHeight = window.innerHeight
-
-//     fdUpElements.forEach(function (elem) {
-//       var elemPosition = elem.offsetTop
-//       if (elemPosition < scrollPosition + windowHeight) {
-//         elem.style.opacity = '1'
-//         elem.style.transform = 'translateY(0)'
-//       }
-//     })
-
-//     fdUpTxtloopElements.forEach(function (elem) {
-//       var elemPosition = elem.offsetTop
-//       if (elemPosition < scrollPosition + windowHeight) {
-//         elem.style.opacity = '1'
-//         elem.style.transform = 'translateY(0)'
-//       }
-//     })
-//   }
-
-//   window.addEventListener('scroll', handleScroll)
-//   window.addEventListener('load', handleScroll)
-// })

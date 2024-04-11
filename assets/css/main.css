@@ -1607,7 +1607,7 @@ body {
     color: #faf164;
     text-decoration: none;
   }
-  .c-product__link:hover .c-product__item__img, .c-product__link:focus-visible .c-product__item__img {
+  .c-product__link:hover .c-product__item-img, .c-product__link:focus-visible .c-product__item-img {
     animation: 1s opacity forwards;
   }
 }
