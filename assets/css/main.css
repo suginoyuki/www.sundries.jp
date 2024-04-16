@@ -1815,7 +1815,7 @@ body {
 }
 
 .c-container {
-  width: 100%;
+  width: 150rem;
   max-width: calc(100% - 40px);
   margin: 0 auto;
 }

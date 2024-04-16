@@ -57,37 +57,8 @@ window.addEventListener('load', function () {
 });
 
 // バナー
-// document.addEventListener('DOMContentLoaded', function () {
-//   var btn = document.querySelector('.c-fixed-bnr__btn')
-//   btn.addEventListener('click', function () {
-//     // クリックされたときに親要素に付与するクラス名を指定
-//     var classNameToAdd = 'is-none'
-
-//     // ボタンの親要素を取得
-//     var parentElement = btn.parentNode
-
-//     // 親要素に新しいクラス名を追加します
-//     parentElement.classList.add(classNameToAdd)
-//   })
-// });
-
-// DOMの読み込みが完了した際の処理を簡潔に記述
-document.addEventListener('DOMContentLoaded', function () {
-  // ボタン要素を変数に代入
-  var btn = document.querySelector('.c-fixed-bnr__btn');
-
-  // ボタンクリック時の処理を関数に切り出し
-  function handleClick() {
-    // クリックされたときに親要素に付与するクラス名を指定
-    var classNameToAdd = 'is-none';
-
-    // ボタンの親要素を直接取得
-    var parentElement = btn.parentElement;
-
-    // 親要素に新しいクラス名を追加
-    parentElement.classList.add(classNameToAdd);
+window.onload = function () {
+  document.getElementById('js-close').onclick = function () {
+    this.parentNode.classList.add('is-none')
   }
-
-  // ボタンクリック時の処理を登録
-  btn.addEventListener('click', handleClick);
-})
+}
