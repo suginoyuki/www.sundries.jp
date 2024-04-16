@@ -8,23 +8,6 @@
     z-index: 5;
     bottom: 30px;
     right: 0;
-
-    // 初回表示時、ページトップをフッターに固定
-    & ~ .l-footer {
-      position: relative;
-
-      .l-pagetop {
-        position: absolute;
-        top: 0;
-        right: 15px;
-
-        .l-pagetop-item {
-          position: relative;
-          top: 0;
-          right: 0;
-        }
-      }
-    }
   }
 
   // 非表示
