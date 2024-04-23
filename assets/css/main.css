@@ -1297,14 +1297,9 @@ body {
   }
 }
 .c-scene__heading {
-  width: 100%;
+  width: -moz-max-content;
+  width: max-content;
   color: #ffffff;
-}
-@media screen and (min-width: 768px) {
-  .c-scene__heading {
-    width: -moz-max-content;
-    width: max-content;
-  }
 }
 .c-scene__heading .c-heading-en {
   margin: 2rem 0;
@@ -1318,12 +1313,10 @@ body {
   display: flex;
   justify-content: flex-end;
   font-size: 1.4rem;
-  padding-right: 4rem;
 }
 @media screen and (min-width: 768px) {
   .c-scene__heading-label {
     font-size: 1.6rem;
-    padding-right: 0;
   }
 }
 .c-scene__content {
